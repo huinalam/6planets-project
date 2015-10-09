@@ -15,7 +15,7 @@ namespace HackerTonWeb.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "6Plants 페이지 입니다.";
 
             return View();
         }
