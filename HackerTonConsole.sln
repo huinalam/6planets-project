@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerTonConsole", "HackerTonConsole\HackerTonConsole.csproj", "{6B17246D-3B2C-4E9C-AC55-B6DFCB7D028D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerTonWeb", "HackerTonWeb\HackerTonWeb.csproj", "{429FBF2C-D3E7-4A6F-8652-9549491C336A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B17246D-3B2C-4E9C-AC55-B6DFCB7D028D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B17246D-3B2C-4E9C-AC55-B6DFCB7D028D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B17246D-3B2C-4E9C-AC55-B6DFCB7D028D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B17246D-3B2C-4E9C-AC55-B6DFCB7D028D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429FBF2C-D3E7-4A6F-8652-9549491C336A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429FBF2C-D3E7-4A6F-8652-9549491C336A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429FBF2C-D3E7-4A6F-8652-9549491C336A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429FBF2C-D3E7-4A6F-8652-9549491C336A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
