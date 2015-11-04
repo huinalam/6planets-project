@@ -1,0 +1,38 @@
+start,end,label,description,type,who
+2011-07-01,2011-10-01,아사드 정권이 지하디스트 죄수들을 방출하다.,풀려난 죄수들 중에는 평화적 시위에 가담하는 정치 수용범들뿐만 아니라 이슬람 극단주의자로 분류되는 지하디스트 범죄자들도 있었다. 전 공안경찰?(security officer)은 정권이 죄수들을 풀어준 것 뿐만 아니라 그들의 군조직을 형성하는데 도움을 주었다고 증언하였다.,remarkable,assad
+2012-07-12,,시리아 북부에서 쿠르드족의 움직임.,쿠르드족의 주 거주지역인 북부 시리아에서 Kurdish supreme committee(쿠르드족 최고 위원회)가 설립되고 이어서 그들의 민병대인 YPG(People's Protection Units)가 결성됨,remarkable,kurds
+2012-07-19,,YPG 시리아 북부도시 Kobani를 점령,,intervention_m,kurds
+2012-07-20,,YPG 시리아 북부도시 Amuda와 Efrin 점령,,intervention_m,kurds
+2012-07-21,,YPG 시리아 북부도시 Al-Malikiyah  점령,,intervention_m,kurds
+2011-03-01,2011-03-30,이란의 Yas 항공 시리아에 IRGC-QF(이란의 파병 전문부대) 무기 수송,Hezaboolah와 IRGC-QF의 시리아 지부에 무기 전달.,intervention_m,iran
+2011-06-01,,세개의 이란 민간 항공사 보병 군장비 시리아로 수송 의혹으로 USDOT(미국재무부?)에 의해 제재,이란의 민간 항공으로 시리아에 군장비와 보병부대를 수송함. 이에대 USDOT(U.S. Department of the Treasury)는 해당 세개의 항공사에 대해 제재를 가함. USDOT에 따르면 미사일과 로켓 부품과 같은 불법 화물들이 의약품으로 위장되있었다고 한다.,intervention_m,iran
+2012-03-01,,Yas항공사 군장비 및 보병 부대 수송,"이란의 Yas 항공사가 2012년 3월 IRGC-QF(이란의 파병부대)의 군인들과 로켓,대공포와 같은 무기들을 수송했다는 의혹을 받았음.",intervention_m,iran
+2012-09-01,,Yas 항공사 군용기로 무기 및 보병부대 수송,5개의 Yas 항공사의 군용기가 시라이로 이동한것이 확인됨.,intervention_m,iran
+2013-02-13,,이란의 Hassan Shateri준장이 저격으로 사망,이란의 Hassan Shateri준장이 Damascus의 외곽을 이동하던중 저격을 당해 사망함. 그가 전직 Quds Force장군이라는 점을 미루어봤을때 이란의 IRGC-QF가 시리아 내전에 군사개입을 했다는 결정적인 증거로 여겨짐.,remarkable,iran
+2012-01-07,2012-02-11,Hezbollah의 저격수들이 Zabadani 전투에 배치됨,2012년 초에 있었던 Zabadani 전투에 Hezbollah 저격수들이 투임됨. Zabadani는 Damscus와 Hezbollah의 본부가 있는 Baalbek루투의 중간에 있는 마을이다.,intervention_m,iran
+2012-02-10,2012-04-20,al-Quasayr 전투,,civil_war,hezbollah
+2012-07-19,,Aleppo 전투,,civil_war,hezbollah
+2012-10-01,,Hezbollah 장군 Ali Hussein al-Qusayr에서 사망,Hezbollah가 시리아 북부에서 활동했다는 증거로 여겨짐.,civil_war,hezbollah
+2012-10-01,,Hezbollah al-Qusayr 지역에 Katyusha미사일 발사,Hezbollah al-Qusayr 지역에 Katyusha미사일 발사,civil_war,hezbollah
+2013-01-31,,Rif Dimashq 폭격,,civil_war,hezbollah
+2013-04-04,2013-06-08,Al-Qusayr 공격,,civil_war,hezbollah
+2013-05-03,,Rif Dimashq 폭격,,civil_war,hezbollah
+2013-11-15,2013-12-15,Qalamoun 전투,,civil_war,hezbollah
+2015-07-03,,Zabadani 전투,,civil_war,hezbollah
+2011-03-23,,Day of Dignity,정치 수용범들의 석방을 요구하면 '존엄성의 날'을 선포하며 ,civil_war,rebel
+2011-03-23,,Day of Rage,"Security forces shoot number of people dead, leading to uprising of aggresive protest",civil_war,rebel
+2011-05-01,,Government begin to deploy forces,"Army tank headed to Homs, Daraa and Damscus and USA reacted it by thightens sanctions",civil_war,assad
+2011-06-01,,Rising of FSA,Defected Syrian officers found Free Syrian Army,civil_war,rebel
+2011-07-01,,Massive crackdown in Hama,President Assad dismissed the governor of Hama due a mass demonstration which brought thosands people. It is reported the government force killed hundreds (Aljajira),civil_war,assad
+2011-08-01,,West calls on Assad to step down,President Obama issued an excutive order immedaitely freezing all assets of the Syrian Government subject to U.S jurisdiction,intervention_p,us
+2012-04-11,,UN broke cease-fire sending monitors to Syria,A UN brokered cease-fure appears to hake hold after the regime announed that they asserted control over the country while rebel denied it claiming that they still killed civils,intervention_p,un
+2012-07-13,,Massacre of roughly 200 people in Tresmeh,,civil_war,assad
+2012-07-18,,Top Assad aides kiled,SFA bombed national security building in Damascus that killed top members of Assad regime,civil_war,rebel
+2012-12-01,,Rebels capture military bases,"Rebel make gains in Damascus's sururbs, taking over militart bases",civil_war,rebel
+2013-08-21,,government accused of using chemical weapons,The Syrian opposition accused the governemnt of luancing a chemical weapons attack in the Damascus suburbs that killed large numbers of civilians.,civil_war,assad
+2013-08-26,,UN inspectors reach Damascus,U.N chemical weapons inepectors visited one of the Damascus suburbs that was allegedy hit with poison gas. The convoy carring the inspectors came under sniper fire in its first attempt to access one of the affected towns.,intervention_p,un
+2013-08-31,,Obama calls for congress vote on Syria,President Obama siad the U.S had a moral responsibility to respond forcefully in Syria but he would not do so until Congress has a chance to vote on the use of military force.,intervention_p,us
+2013-09-09,,Russia proposes syria give up chemical arms,Russia and Syria welcomed the idea that Syrian government could avert a U.S attack by placing its chemical weapons under international control.,intervention_p,russia
+2013-09-16,,UN finds 'convincing evidence' of chemical attack,"In a report of U.N weapons inspectors say they found 'clear and convincing evidence"" that rockets containing the 'nerve agent sarine were used"" in an Aug.",remarkable,un
+2013-12-16,,Air raids kill 100 in Aleppo,"Airstrikes by Syrian war planes on rebel-held Aleppo killed more than 100 people in the northen city, activists said, according to the Associated press.",civil_war,assad
+2014-02-23,,유엔 안보리,시리아 인도주의 결의안 채택,intervention_p,un

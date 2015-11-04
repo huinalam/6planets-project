@@ -9,7 +9,9 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.XPath;
+using HackerTonConsole.Modules;
 using HtmlAgilityPack;
+using Microsoft.VisualBasic.FileIO;
 
 /*
 샘플 코드 : 
@@ -45,6 +47,19 @@ namespace HackerTonConsole
 
         static void Main(string[] args)
         {
+            //WebCrawling();
+
+            //CsvConverter.Convert_SuicideAttackDb();
+            //CsvConverter.Convert_external();
+            //CsvConverter.Convert_internal_warxlsx();
+            //CsvConverter.Convert_peace();
+            //CsvConverter.Merge();
+
+            CsvConverter.Converter_Classify();
+        }
+
+        private static void WebCrawling()
+        {
             // 데이터 정의
             var dt = new DataTable();
             InitDataTable(Category, dt);
@@ -68,7 +83,8 @@ namespace HackerTonConsole
                     int count = 0;
                     // 모든 tr 태그들을 불러온다
                     foreach (HtmlNode link in document.DocumentNode.SelectNodes("//tr"))
-                    {//"//a[@href]"
+                    {
+                        //"//a[@href]"
 
                         var row = dt.NewRow();
                         // 첫 3 Row 값을 무시한다.
@@ -90,13 +106,13 @@ namespace HackerTonConsole
                         Console.WriteLine("-----------------");
                     }
                 }
-                
+
                 Console.WriteLine("==================");
                 Console.WriteLine($"== {uriCount} 번째 완료 ==");
                 Console.WriteLine("==================");
                 Thread.Sleep(1000);
             }
-            
+
             //StreamWriter sw = new StreamWriter("Martyrs.csv");
             //WriteToStream(sw, dt, false, false);
             dt.WriteCsv("Martyrs.csv");
@@ -148,7 +164,6 @@ namespace HackerTonConsole
                         }
                         else
                         {
-                            
                         }
 
                         if (str.Contains("Male"))
@@ -161,7 +176,6 @@ namespace HackerTonConsole
                         }
                         else
                         {
-                            
                         }
                     }
                 }
@@ -254,6 +268,7 @@ namespace HackerTonConsole
                 stream.Write(s);
             stream.Flush();
         }
+
     }
 }
 

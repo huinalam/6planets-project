@@ -1,0 +1,320 @@
+/*
+ * Jeju Myeongjo (Korean) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Jeju Myeongjo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/jejumyeongjo/v3/JejuMyeongjo-Regular.ttf) format('truetype');
+}
+
+body{
+    background-color: #222222;
+    font-family: Helvetica;
+    color: white;
+    width:90%;
+    letter-spacing: 1.2px;
+    margin: 10px auto;
+}
+p{
+    text-indent: 10px;
+}
+.title{
+      width: 924px;     
+      font-family: 'Roboto Slab', serif;
+      font-size: 24px;
+      font-weight: 100;
+      text-align: center;
+      letter-spacing: 1.2px;
+      margin: 40px auto 80px auto;
+
+}
+.title2-1{
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-size: 25px;
+    color: #44CCAA;
+    line-height: 85%;
+}
+.title2-2{
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-size: 25px;
+    color: #EE5588;
+    line-height: 85%;
+}
+.wrapper{
+    width: 924px;
+    margin: 10px auto;
+}
+.div_main{
+    width: 924px;
+    text-align: center;
+}
+
+.div1{
+    width: 924px;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+}
+.div2{
+    width: 924px;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+}
+.div3{
+    width: 924px;
+     margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+}
+.div4{
+    width: 924px;
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+    position: relative;
+
+}
+
+.div_text_left{
+    width: 422px;
+    margin: 5px 15px;
+    position: relative;
+    float: left;
+    letter-spacing: 1.2px;
+    line-height: 140%;
+    font-family: 'Jeju Myeongjo';
+    font-size: 0.8rem;
+    color: #66bb99;
+    text-align: left;
+}
+.div_text_right{
+    width: 422px;
+    margin: 5px 15px;
+    float: left;
+    letter-spacing: 1.2px;
+    line-height: 140%;
+    font-family: 'Jeju Myeongjo';
+    font-size: 0.8rem;
+    text-align: left;
+    color: #d65577;
+}
+.axis { /* axis labels */
+    fill: #dddddd;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.axis line{ /* axis tick marks */
+    stroke-width : 0.5;
+    stroke: #dddddd;
+    shape-rendering: crispEdges;
+}
+
+.axis path { /* axis line */
+    stroke-width : 0.5;
+    stroke: #dddddd;
+    shape-rendering: crispEdges;
+}
+
+/* timeline band */
+
+.band { /* band background */
+    fill: #eeeeee;
+}
+
+/* labels */
+.bandLabel {
+    fill: #F0F0F0;
+    font: 10px sans-serif;
+    font-weight: bold;
+}
+.bandMinMaxLabel {
+    fill: blue;
+    font: 10px sans-serif;
+    font-weight: bold;
+}
+
+.bandMidLabel {
+    fill: red;
+    font: 10px sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* brush */
+.brush .extent {
+    stroke: gray;
+    fill: blue;
+    fill-opacity: .1;
+}
+
+.chart {
+    background-color: #222222;
+}
+
+.interval {
+    cursor : default;
+    pointer-events: true;
+}
+
+.instant {
+    cursor : default;
+    pointer-events: true;
+}
+
+.instantLabel {
+    fill : #eeeeee;
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+    stroke-location: inside;
+}
+#civil_war{
+    fill: #BB2244;
+    color: #C23355;
+    border-color: #B71C1C;
+}
+#intervention_p{
+    fill: #1177BB;
+    color: #22abc3;
+    border-color: #444444;
+}
+#intervention_m{
+    fill: #338866;
+    color:#338866;
+    border-color: #444444;
+}
+#agreement{
+    fill: #00BB44;
+    color: #00C853;
+    border-color: #444444;
+}
+#remarkable{
+    fill: #ffcc00;
+    color: #ffcc00;
+    border-color: #444444;
+
+}
+#un{
+    fill: #1177BB;
+    color: #22abc3;
+}
+#us{
+    fill: #884477;
+    color: #884477;
+}
+#russia{
+    fill: #1133AA;
+    color: #1133AA;
+
+}
+#assad{
+    fill: #BB2244;
+    color: #C23355;
+}
+#hezbollah{
+    fill: #ffcc00;
+    color: #ffcc00;
+}
+#iran{
+    fill: #338866;
+    color:#338866;
+}
+#kurds{
+    fill: #aa5522;
+    color:#aa5522;
+}
+#rebel{
+    fill: #335533;
+    color:#335533;
+}
+.intervalLabel {
+    fill : #0277BD;
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+}
+
+.item {
+    cursor : default;
+    pointer-events: auto;
+}
+
+.svg {
+    border-style: solid;
+    border-width: 0px;
+}
+
+.main_event{
+    fill: #eeeeee;
+    font-family: Helvetica;
+    font-size: 10px;
+    font-style: italic;
+    text-anchor: middle;
+
+}
+
+.tooltip {
+    font-family: Helvetica;
+    font-size: 10px;
+}
+.tooltip_div {
+    background-color: #111111;
+    padding: 5px;
+    font-family: Helvetica;
+    font-size: 11px;
+    width: 250px;
+    position: absolute;
+    visibility: hidden;
+    cursor:default;
+    shape-rendering: crispEdges;
+    pointer-events: none;
+}
+
+
+#refugee{
+    fill: #338866;
+    color:#338866;
+}
+#death{
+    fill: #C23355;
+    color: #C23355;
+    paddig-top: 5px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #C23355;
+
+}
+.line_r {
+    fill: #338866;;
+    stroke: #338866;
+    stroke-width: 1px;
+}
+.circle_r {
+    fill: #338866;
+
+}
+.line_d {
+    fill: none;
+    stroke: #A7100C;
+    stroke-width: 1px;
+}
+.circle_d {
+    fill: #A7100C;
+  stroke: #F8BBD0;
+}
+#legend{
+    font-family: Helvetica;
+    font-size: 10px;
+    fill: #dddddd;
+}

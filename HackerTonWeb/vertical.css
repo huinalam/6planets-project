@@ -1,0 +1,328 @@
+body{
+	width: 90%;
+	background-color: #222222;
+    font-family: Helvetica;
+    color: #666666;
+    letter-spacing: 1.2px;
+    margin: 10px  auto;
+
+}
+h1{
+    line-height: 60%;
+}
+h1.chapter{
+    color: #eeeeee;
+    font-size: 20px;
+    text-align: left;
+}
+h1.time{
+    color: #eeeeee;
+    font-size: 15px;
+    text-align: left;
+}
+.title {
+	  width:1030px;
+	  font-family: 'Roboto Slab', serif;
+	  font-size: 25px;
+	  font-weight: 100;
+	  text-align: center;
+	  letter-spacing: 1.2px;
+	  margin: 10px  auto;
+	  color: #eeeeee;
+}
+.wrapper{
+	width: 1030px;
+	margin: 40px  auto;
+}
+.div_main{
+	width: 1030px
+	height: auto;
+	margin: 40px auto 40px auto;
+	text-align: center;
+	background-color: #eeeeee;
+	display: inline-block;
+}
+.div_column1{
+	width: 580px;
+    margin: 5px;
+	height: auto;
+	background-color: #222222;
+	position: relative;
+	float: left
+}
+.div_column2{
+	width: 410px;
+	margin: 5px;
+	height: 793px;
+    padding: 10px;
+	background-color: #222222;
+	position: relative;
+	float:left;
+}
+.chapter_title{
+    font-size: 20px;
+    width: 420px;
+    margin-bottom: 40px;
+    height: auto;
+    background-color: #222222; 
+}
+.chapter_content{
+    width: 420px;
+    height: auto;
+    background-color: #222222; 
+    display: inline-block;
+}
+.media_section{
+    width: 420px;
+    height: 250px;
+}
+.who{
+    width: 210px;
+    height: 220px;
+    background-color: #222222; 
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.what{
+    width: 210px;
+    height: 220px;
+    background-color: #222222; 
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.summary{
+    width: 420px;
+    height: 200px;
+    background-color: #222222; 
+}
+.div_head{
+    width: 580px;
+    margin: 0px;
+    height: auto;
+    background-color: #222222;
+    display: inline-block;
+}
+.head1{
+    width:110px;
+    height:auto;
+    margin: 5px 5px 0px 5px;
+    padding-left: 20px;
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.head2{
+    width:200px;
+    height:auto;
+    margin: 5px 5px 0px 5px;
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.head3{
+    width: 220px;
+    height:auto;
+    margin: 5px 5px 0px 5px;
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.div_svg{
+    text-align:left;
+    width: 580px;
+    margin: 0px;
+    height: auto;
+    background-color: #222222;
+}
+.heading{
+    color: #eeeeee;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 15px;
+}
+.exp{
+    color: #eeeeee;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 110%;
+    font-size: 10px;
+}
+.div_line{
+    stroke-width : 0.5;
+    stroke: #888888;
+    stroke-dasharray: 2,2;
+    shape-rendering: crispEdges;
+}
+#legend{
+    font-family: Helvetica;
+    font-size: 9px;
+    fill: #dddddd;
+}
+.axis { /* axis labels */
+    fill: #dddddd;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 10px;
+}
+
+.axis line{ /* axis tick marks */
+    stroke-width : 0.5;
+    stroke: #dddddd;
+    shape-rendering: crispEdges;
+}
+#date_axis line{
+    stroke: #888888;
+    stroke-dasharray: 2,2;
+}
+#date_axis path{
+    display: none;
+}
+.axis path { /* axis line */
+    stroke-width : 0.5;
+    stroke: #dddddd;
+    shape-rendering: crispEdges;
+}
+/* timeline band */
+
+.band { /* band background */
+    fill: #eeeeee;
+}
+
+/* labels */
+.bandLabel {
+    fill: #F0F0F0;
+    font: 10px sans-serif;
+    font-weight: bold;
+}
+.bandMinMaxLabel {
+    fill: blue;
+    font: 10px sans-serif;
+    font-weight: bold;
+}
+
+.bandMidLabel {
+    fill: red;
+    font: 10px sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* brush */
+.brush .extent {
+    stroke: gray;
+    fill: blue;
+    fill-opacity: .1;
+}
+
+.chart {
+    background-color: #222222;
+}
+
+.interval {
+    cursor : default;
+    pointer-events: true;
+}
+
+.instant {
+    cursor : default;
+    pointer-events: true;
+}
+
+.instantLabel {
+    fill : #eeeeee;
+    font: 10px sans-serif;
+    shape-rendering: crispEdges;
+    stroke-location: inside;
+}
+
+#refugee{
+    fill: #338866;
+    color:#338866;
+}
+.line_d {
+    stroke: #C23355;
+    stroke-width: 1px;
+}
+#death{
+    fill: #C23355;
+    color: #C23355;
+    paddig-top: 5px;
+}
+#civil_war{
+    fill: #BB2244;
+    color: #C23355;
+    border-color: #B71C1C;
+}
+#intervention_p{
+    fill: #1177BB;
+    color: #22abc3;
+    border-color: #444444;
+}
+#intervention_m{
+    fill: #338866;
+    color:#338866;
+    border-color: #444444;
+}
+#agreement{
+    fill: #00BB44;
+    color: #00C853;
+    border-color: #444444;
+}
+#remarkable{
+    fill: #ffcc00;
+    color: #ffcc00;
+    border-color: #444444;
+}
+#etc{
+    fill: #dddddd;
+    color: #dddddd;
+    border-color: #444444;
+}
+#un{
+    fill: #1177BB;
+    color: #22abc3;
+}
+#us{
+    fill: #884477;
+    color: #884477;
+}
+#russia{
+    fill: #1133AA;
+    color: #1133AA;
+
+}
+#assad{
+    fill: #BB2244;
+    color: #C23355;
+}
+#hezbollah{
+    fill: #ffcc00;
+    color: #ffcc00;
+}
+#iran{
+    fill: #338866;
+    color:#338866;
+}
+#kurds{
+    fill: #aa5522;
+    color:#aa5522;
+}
+#rebel{
+    fill: #335533;
+    color:#335533;
+}
+.tooltip_div {
+    background-color: #111111;
+    padding: 5px;
+    font-family: Helvetica;
+    font-size: 11px;
+    width: 250px;
+    position: absolute;
+    visibility: hidden;
+    cursor:default;
+    shape-rendering: crispEdges;
+    pointer-events: none;
+}
