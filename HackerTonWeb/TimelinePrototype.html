@@ -78,7 +78,7 @@
     </script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top #myScrollspy">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -115,67 +115,120 @@
         <!-- /.container -->
     </nav>
 
+
+
+    <!--<div data-spy="affix" data-offset-top="600" data-offset-bottom="200">
+            dddddddddddddddddddddddd
+        </div>
+        <script>
+        $('#myAffix').affix({
+      offset: {
+        top: 1000,
+        bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true));
+        }
+      }
+    })
+        </script>-->
+
     <section id="map-section" class="content-section text-center" style="padding-top: 100px">
         <div class="row">
-            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1" style="position: fixed">
-                <div class="div_head">
-                    <div class="head1">
-                        <h2 class="heading">Timeline</h2>
-                        <p class="exp">"Range of time is from Jan 2011 to present, ongoing civil war"</p>
-                    </div>
-                    <div class="head2">
-                        <h2 class="heading">Events </h2>
-                        <p class="exp">"Key events during the civil war. Each type of an event is mapped by different color."</p>
-                    </div>
-                    <div class="head3">
-                        <h2 class="heading">Deaths & Refugees</h2>
-                        <p class="exp">"The number of death during the civil war per a month from March 2011 to Nov 2015."</p>
-                    </div>
-                </div>
-                <div class="div_svg"></div>
-            </div>
 
-            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1" >
-                
-            </div>
-
-                <div class="col-xs-5 col-sm-5 col-md-5">
-                    <h2>시리아 탈출 인터뷰</h2>
-                    <p>
-                        Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.
-                    </p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
-                    <p>
-                        This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
-                    </p>
-                    <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            <!--<nav class="col-sm-3" id="myScrollspy">
+                <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+                    <li><a href="#section1">Section 1</a></li>
+                    <li><a href="#section2">Section 2</a></li>
+                    <li><a href="#section3">Section 3</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section41">Section 4-1</a></li>
+                            <li><a href="#section42">Section 4-2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>-->
+            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1" id="myScrollspy" style="top: 300px">
+                <div class="scrollspy" data-spy="affix" data-offset-top="300">
+                    <div class="div_head">
+                        <div class="head1">
+                            <h2 class="heading">Timeline</h2>
+                            <p class="exp">"Range of time is from Jan 2011 to present, ongoing civil war"</p>
+                        </div>
+                        <div class="head2">
+                            <h2 class="heading">Events </h2>
+                            <p class="exp">"Key events during the civil war. Each type of an event is mapped by different color."</p>
+                        </div>
+                        <div class="head3">
+                            <h2 class="heading">Deaths & Refugees</h2>
+                            <p class="exp">"The number of death during the civil war per a month from March 2011 to Nov 2015."</p>
+                        </div>
+                    </div>
+                    <div class="div_svg"></div>
                 </div>
             </div>
+            <!--<div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+
+            </div>-->
+
+            <div class="col-xs-5 col-sm-5 col-md-5">
+                <h2>시리아 탈출 인터뷰</h2>
+                <p>
+                    Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.
+                </p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            </div>
+        </div>
     </section>
-    
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Grayscale</h2>
+                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </footer>
+
+
     <!-- jQuery -->
     <script src="Scripts/jquery-2.1.4.js"></script>
 
@@ -190,7 +243,19 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="Scripts/grayscale.js"></script>
-    <script src="timeline.js"></script>
+<script src="timeline.js"></script>
+
+
+    <script>
+                $(function () {
+                    $('#scrollspy').affix({
+                        offset: {
+                            top: 50,
+                            bottom: $('#download').offset().top
+                        }
+                    });
+                })
+    </script>
 </body>
 
 </html>
