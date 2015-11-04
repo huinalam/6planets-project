@@ -127,7 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="civilwarsvg.js" />
+    <Content Include="timeline.js" />
     <Content Include="civilwar_timeline.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -194,6 +194,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="timelin.js" />
     <Content Include="timeline.css" />
+    <Content Include="TimelinePrototype.html" />
     <Content Include="vertical.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

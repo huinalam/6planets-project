@@ -1,4 +1,4 @@
-body{
+/*body{
 	width: 90%;
 	background-color: #222222;
     font-family: Helvetica;
@@ -6,21 +6,21 @@ body{
     letter-spacing: 1.2px;
     margin: 10px  auto;
 
-}
-h1{
+}*/
+/*h1{
     line-height: 60%;
-}
-h1.chapter{
+}*/
+/*h1.chapter{
     color: #eeeeee;
     font-size: 20px;
     text-align: left;
-}
-h1.time{
+}*/
+/*h1.time{
     color: #eeeeee;
     font-size: 15px;
     text-align: left;
-}
-.title {
+}*/
+/*.title {
 	  width:1030px;
 	  font-family: 'Roboto Slab', serif;
 	  font-size: 25px;
@@ -41,14 +41,10 @@ h1.time{
 	text-align: center;
 	background-color: #eeeeee;
 	display: inline-block;
-}
+}*/
 .div_column1{
 	width: 580px;
-    margin: 5px;
 	height: auto;
-	background-color: #222222;
-	position: relative;
-	float: left
 }
 .div_column2{
 	width: 410px;
@@ -99,10 +95,7 @@ h1.time{
 }
 .div_head{
     width: 580px;
-    margin: 0px;
     height: auto;
-    background-color: #222222;
-    display: inline-block;
 }
 .head1{
     width:110px;
@@ -130,11 +123,9 @@ h1.time{
     float: left;
 }
 .div_svg{
-    text-align:left;
     width: 580px;
     margin: 0px;
     height: auto;
-    background-color: #222222;
 }
 .heading{
     color: #eeeeee;
