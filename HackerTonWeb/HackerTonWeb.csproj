@@ -127,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AffixExample.html" />
     <Content Include="timeline.js" />
     <Content Include="civilwar_timeline.html" />
     <Content Include="Content\bootstrap.css" />
