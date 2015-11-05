@@ -1,5 +1,4 @@
-﻿
-//              **웹폰트 설정**
+﻿//              **웹폰트 설정**
 WebFontConfig = {
     google: { families: ['Roboto+Slab:100:latin', 'Source+Code+Pro:400,300,200:latin'] }
 };
@@ -49,6 +48,7 @@ var yAxis1;
 var body = d3.select("body");
 
 var legend_list1 = ["civil_war", "intervention_m", "intervention_p", "agreement", "remarkable"];
+var legend_list2 = ["UN", "US", "Russia", "Assad regime", "Hezbollah", "Iran", "Kurds", "rebel"];
 
 var main_svg = d3.select(".div_svg").append("svg") // 월별 난민 발생수를 bar chart
                 .attr("width", width1)
@@ -62,8 +62,9 @@ var alpha = 40; //mouseovell시 명암변화
 
 //** 섹션별 position 지정 value ** //
 
-var px_events = 110;
-var px_refugees = 320;
+var px_events = 90;
+var px_death = 440;
+var px_refugees = 290;
 
 var div_line1;
 var div_line2;
@@ -74,7 +75,7 @@ var chart = main_svg.append("g")                       // 이벤트들의 밴드
         .attr("transform", "translate(20,-30)");
 
 
-div_line2 = chart.append("line")
+div_line1 = chart.append("line")
                .attr("class", "div_line")
                .attr("x1", px_events)
                .attr("y1", 50)
@@ -82,21 +83,35 @@ div_line2 = chart.append("line")
                .attr("y2", chart_height - 10);
 
 
-div_line1 = chart.append("line")
+div_line2 = chart.append("line")
+                .attr("class", "div_line")
+                .attr("x1", px_death)
+                .attr("y1", 50)
+                .attr("x2", px_death)
+                .attr("y2", chart_height - 10);
+
+div_line3 = chart.append("line")
                 .attr("class", "div_line")
                 .attr("x1", px_refugees)
                 .attr("y1", 50)
                 .attr("x2", px_refugees)
                 .attr("y2", chart_height - 10);
 
+var line_graph_g = chart.append("g")
+                    .attr("transform", "translate(0,0)");
+
+
 
 var legend_timeline = chart.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(120,660)");
+        .attr("transform", "translate(125,660)");
 
 var legend_type = legend_timeline.append("g");
 
-var legend_l_circle = legend_type.selectAll("circle")
+var legend_who = legend_timeline.append("g")
+                    .attr("opacity", 0);
+
+var legend_type_circle = legend_type.selectAll("circle")
                             .data(legend_list1)
                             .enter()
                             .append("circle")
@@ -123,7 +138,7 @@ var legend_l_circle = legend_type.selectAll("circle")
                                 }
                             });
 
-var legend_l_text = legend_type.selectAll("text")
+var legend_type_text = legend_type.selectAll("text")
                                 .data(legend_list1)
                                 .enter()
                                 .append("text")
@@ -134,7 +149,7 @@ var legend_l_text = legend_type.selectAll("text")
                                 .attr("id", "legend")
                                 .text(function (d) {
                                     if (d == "civil_war") {
-                                        return "Civil War";
+                                        return "Battle";
                                     }
                                     else if (d == "intervention_m") {
                                         return "Military Intervention";
@@ -149,6 +164,55 @@ var legend_l_text = legend_type.selectAll("text")
                                         return "Remarkable Event";
                                     }
 
+                                });
+
+var legend_who_circle = legend_who.selectAll("circle")
+                            .data(legend_list2)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return i * 20;
+                            })
+                            .attr("r", 5)
+                            .attr("id", function (d) {
+                                if (d == "UN") {
+                                    return "un";
+                                }
+                                else if (d == "US") {
+                                    return "us";
+                                }
+                                else if (d == "Russia") {
+                                    return "russia";
+                                }
+                                else if (d == "Assad regime") {
+                                    return "assad";
+                                }
+                                else if (d == "Hezbollah") {
+                                    return "hezbollah";
+                                }
+                                else if (d == "Iran") {
+                                    return "iran";
+                                }
+                                else if (d == "Kurds") {
+                                    return "kurds";
+                                }
+                                else if (d == "Rebel") {
+                                    return "rebel";
+                                }
+                            });
+
+var legend_who_text = legend_who.selectAll("text")
+                                .data(legend_list2)
+                                .enter()
+                                .append("text")
+                                .attr("x", 10)
+                                .attr("y", function (d, i) {
+                                    return i * 20 + 3;
+                                })
+                                .attr("id", "legend")
+                                .text(function (d) {
+                                    return d;
                                 });
 
 //---------------------------------------------------------------------------
@@ -380,7 +444,8 @@ timeline.band = function () {
 
     band.g = chart.append("g")
             .attr("id", "mainBand")
-            .attr("transform", "translate(" + px_events + ",0)");
+            .attr("transform", "translate(" + px_events + ",0)")
+            .attr("opacity", 0);
 
     var items = band.g.selectAll("svg")
                 .data(dataCon.items)
@@ -392,6 +457,9 @@ timeline.band = function () {
                     return d.instant ? xScale_band(d.track) : xScale_band(d.track)
                 })
                 .attr("height", function (d) {
+                    if (yScale(d.end) - yScale(d.start) < 0) {
+                        console.log(d.label);
+                    }
                     return d.instant ? band.itemWidth : (yScale(d.end) - yScale(d.start))
                 })
                 .attr("width", band.itemWidth)
@@ -572,19 +640,20 @@ d3.csv("timeline5.csv", function (d) {
         var max = d3.max(data, function (d) { return d.num });
 
         xScale_d = d3.scale.linear()
-            .range([0, 200])
+            .range([0, 80])
             .domain([min, 6000]);
 
         var xAxis = d3.svg.axis()
                  .scale(xScale_d)
                  .orient("top")
                  .ticks(4)
-                 .tickValues([0, 2000, 4000, 6000])
+                 .tickValues([0, 3000, 6000])
+                 .tickFormat(d3.format("s"))
                  .tickSize(6, 0);
 
 
-        var point_group = chart.append("g")
-                            .attr("transform", "translate(" + px_refugees + ",0)")
+        var point_group = line_graph_g.append("g")
+                            .attr("transform", "translate(" + px_death + ",0)")
                             .selectAll("circle")
                             .data(data)
                             .enter();
@@ -599,8 +668,8 @@ d3.csv("timeline5.csv", function (d) {
                         return yScale(d.date);
                     });
 
-        var line_group = chart.append("g")
-                            .attr("transform", "translate(" + px_refugees + ",0)")
+        var line_group = line_graph_g.append("g")
+                            .attr("transform", "translate(" + px_death + ",0)")
                             .selectAll("line")
                             .data(data)
                             .enter();
@@ -622,69 +691,339 @@ d3.csv("timeline5.csv", function (d) {
                     .x(function (d) { return xScale_d(d.num); })
                     .y(function (d) { return yScale(d.date); })
 
-        /*var line_path = chart.append("g")
-                        .attr("transform","translate("+px_refugees+",0)")
-                        .append("path")
-                        .datum(data)
-                        .attr("class","line_d")
-                        .attr("d",line);*/
+
+        line_graph_g.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(" + px_death + ",50)")
+                .call(xAxis)
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("dy", ".71em");
+    });
 
 
+    d3.csv("chartMonth_ac.csv", function (data) {  // 난민 누적수
 
-        //barchart로 시각화할때의 코드
-        /*bar_group.append("rect") 
-                 .attr("id", "death")
-                 .attr("width",function(d){
-                         return xScale_d(d.num);
-                     })
-                 .attr("height",10)
-                     .attr("x",0)
-                     .attr("y", function(d){
-                         return yScale(d.date)-5;
-                     })
-                 .on("mouseover", function(d){
+        data.forEach(function (item) {
 
-                       var data=d;
-                       var rgb =  d3.rgb(d3.select(this).style("fill"));
-                         
-                         rgb.r +=alpha;
-                         rgb.g +=alpha;
-                         rgb.b +=alpha;
-                       
-                         d3.select(this).style("fill",rgb);
-
-                     var xPos = parseFloat(d3.select(this).attr("x"))+105;
-                     var yPos = 195;
-                 })
-                 .on("mouseout", function(){
-
-                      var rgb =  d3.rgb(d3.select(this).style("fill"));
-                         
-                         rgb.r -=alpha;
-                         rgb.g -=alpha;
-                         rgb.b -=alpha;
-                       
-                         d3.select(this).style("fill",rgb);
-                     
-                 });*/
+            item.date = parseDate(item.date);
+            item.ac_num = +item.ac_num;
+            item.num = +item.num;
+        });
 
 
-        chart.append("g")
+        var min = 0;
+        var max = d3.max(data, function (d) { return d.num });
+
+        xScale_r = d3.scale.linear()
+            .range([150, 0])
+            .domain([min, 250000]);
+
+        var xAxis = d3.svg.axis()
+                 .scale(xScale_r)
+                 .orient("top")
+                 .ticks(4)
+                 .tickValues([0, 125000, 250000])
+                 .tickFormat(d3.format("s"))
+                 .tickSize(6, 0);
+
+
+        var point_group = line_graph_g.append("g")
+                            .attr("transform", "translate(" + px_refugees + ",0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter();
+
+        point_group.append("circle")
+                    .attr("id", "refugee")
+                    .attr("r", "3")
+                    .attr("cx", function (d) {
+                        return xScale_r(d.num);
+                    })
+                    .attr("cy", function (d) {
+                        return yScale(d.date);
+                    });
+
+        var line_group = line_graph_g.append("g")
+                            .attr("transform", "translate(" + px_refugees + ",0)")
+                            .selectAll("line")
+                            .data(data)
+                            .enter();
+
+        line_group.append("line")
+            .attr("class", "line_r")
+            .attr("x1", 150)
+            .attr("y1", function (d) {
+                return yScale(d.date);
+            })
+            .attr("x2", function (d) {
+                return xScale_r(d.num);
+            })
+            .attr("y2", function (d) {
+                return yScale(d.date);
+            });
+
+        var line = d3.svg.line()
+                    .x(function (d) { return xScale_d(d.num); })
+                    .y(function (d) { return yScale(d.date); })
+
+
+        line_graph_g.append("g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(" + px_refugees + ",50)")
                 .call(xAxis)
                 .append("text")
                 .attr("transform", "rotate(-90)")
                 .attr("dy", ".71em");
+    });
+
+    d3.csv("frequency.csv", function (data) {
+
+        data.forEach(function (item) {
+
+            item.date = parseDate(item.date);
+            item.interventionM = +item.interventionM;
+            item.interventionP = +item.interventionP;
+            item.civiWar = +item.civiWar;
+            item.remarkable = +item.remarkable;
+
+        });
+
+        var frequency = chart.append("g")
+                            .attr("class", "frequency")
+                            .attr("transform", "translate(0,0)");
+
+        var civil_war_g = frequency.append("g")
+                            .attr("transform", "translate(140,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.civilWar * 2;
+                            })
+                            .attr("id", "death");
+
+        var interventionP_g = frequency.append("g")
+                            .attr("transform", "translate(180,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.interventionP * 2;
+                            })
+                            .attr("id", "intervention_p");
+
+        var interventionM_g = frequency.append("g")
+                            .attr("transform", "translate(220,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.interventionM * 2;
+                            })
+                            .attr("id", "intervention_m");
+
+        var remarkable_g = frequency.append("g")
+                            .attr("transform", "translate(260,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.remarkable * 2;
+                            })
+                            .attr("id", "remarkable");
+
 
     });
 
+    d3.csv("involved.csv", function (data) {
 
+        data.forEach(function (item) {
+
+            item.date = parseDate(item.date);
+            item.Iran = +item.Iran;
+            item.Assad = +item.Assad;
+            item.UN = +item.UN;
+            item.Rabel = +item.Rabel;
+            item.Russia = +item.Russia;
+            item.Hezabollah = +item.Hezabollah;
+            item.Kurds = +item.Kurds;
+            item.ISIS = +item.ISIS;
+            item.US = +item.US;
+
+        });
+
+        var involved_g = chart.append("g")
+                            .attr("class", "involved")
+                            .attr("transform", "translate(0,0)")
+                            .attr("opacity", 0);
+
+        var Iran_g = involved_g.append("g")
+                            .attr("transform", "translate(140,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.Iran * 2;
+                            })
+                            .attr("id", "iran");
+
+        var Assad_g = involved_g.append("g")
+                            .attr("transform", "translate(180,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.Assad * 2;
+                            })
+                            .attr("id", "assad");
+
+        var Rebel_g = involved_g.append("g")
+                            .attr("transform", "translate(220,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.Rebel * 2;
+                            })
+                            .attr("id", "rebel");
+
+        var Hezabollah_g = involved_g.append("g")
+                            .attr("transform", "translate(260,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx", 0)
+                            .attr("cy", function (d, i) {
+                                return yScale(d.date);
+                            })
+                            .attr("r", function (d) {
+                                return d.ISIS * 2;
+                            })
+                            .attr("id", "hezbolah");
+
+
+    });
+
+    d3.selectAll("input").on("change", change);
+
+    function change() {
+        var radio_checked = this.value;
+        console.log(radio_checked);
+
+        if (radio_checked == "type") {
+            d3.select(".frequency")
+                                   .transition()
+                                   .duration(100)
+                                   .attr("opacity", 1);
+
+            d3.select(".involved")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 0);
+
+            d3.select("#mainBand")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 0);
+
+            legend_type.transition()
+                       .duration(100)
+                       .attr("opacity", 1);
+
+            legend_who.transition()
+                       .duration(100)
+                       .attr("opacity", 0);
+
+        } else if (radio_checked == "group") {
+            d3.select(".frequency")
+                                   .transition()
+                                   .duration(100)
+                                   .attr("opacity", 0);
+
+            d3.select(".involved")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 1);
+
+            d3.select("#mainBand")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 0);
+
+            legend_type.transition()
+                       .duration(100)
+                       .attr("opacity", 0);
+
+            legend_who.transition()
+                       .duration(100)
+                       .attr("opacity", 1);
+
+        } else if (radio_checked == "event") {
+            d3.select(".frequency")
+                                   .transition()
+                                   .duration(100)
+                                   .attr("opacity", 0);
+
+            d3.select(".involved")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 0);
+
+            d3.select("#mainBand")
+                                    .transition()
+                                    .duration(100)
+                                    .attr("opacity", 1);
+
+            legend_type.transition()
+                       .duration(100)
+                       .attr("opacity", 0);
+
+            legend_who.transition()
+                       .duration(100)
+                       .attr("opacity", 0);
+
+        }
+    }
 
     timeline.data(d);
     timeline.setScale();
     timeline.yAxis();
     timeline.band();
-
-
 });

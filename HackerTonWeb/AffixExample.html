@@ -2,12 +2,11 @@
 <html>
 <head>
     <title></title>
-    <meta charset="utf-8" />    <!-- Bootstrap Core CSS -->
-    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
     <!-- Bootstrap Core CSS -->
     <link href="Content/bootstrap.min.css" rel="stylesheet">
     <style>
-        @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+        /*@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);*/
 
         body {
             background: lightblue;
@@ -30,9 +29,9 @@
             margin-bottom: 0;
         }
 
-            .jumbotron button {
-                margin-top: 10px;
-            }
+        .jumbotron button {
+            margin-top: 10px;
+        }
 
         section {
             padding: 40px 0;
@@ -48,55 +47,55 @@
             border-bottom: none;
         }
 
-        .nav {
+        .graphnav {
             background: #4baac8;
         }
 
-            .nav a {
-                color: black;
-                font-style: italic;
-            }
+        .graphnav a {
+            color: black;
+            font-style: italic;
+        }
 
-            .nav li a:hover,
-            .nav li a:focus {
-                background: #86c5da;
-            }
+        .graphnav li a:hover,
+        .graphnav li a:focus {
+            background: #86c5da;
+        }
 
-            .nav .active {
-                font-weight: bold;
-                background: #72bcd4;
-            }
+        .graphnav .active {
+            font-weight: bold;
+            background: #72bcd4;
+        }
 
-            .nav .nav {
-                display: none;
-            }
+        .graphnav .graphnav {
+            display: none;
+        }
 
-            .nav .active .nav {
-                display: block;
-            }
+        .graphnav .active .nav {
+            display: block;
+        }
 
-            .nav .nav a {
-                font-weight: normal;
-                font-size: .85em;
-            }
+        .graphnav .graphnav a {
+            font-weight: normal;
+            font-size: .85em;
+        }
 
-            .nav .nav span {
-                margin: 0 5px 0 2px;
-            }
+        .graphnav .graphnav span {
+            margin: 0 5px 0 2px;
+        }
 
-            .nav .nav .active a,
-            .nav .nav .active:hover a,
-            .nav .nav .active:focus a {
-                font-weight: bold;
-                padding-left: 30px;
-                border-left: 5px solid black;
-            }
+        .graphnav .graphnav .active a,
+        .graphnav .graphnav .active:hover a,
+        .graphnav .graphnav .active:focus a {
+            font-weight: bold;
+            padding-left: 30px;
+            border-left: 5px solid black;
+        }
 
-            .nav .nav .active span,
-            .nav .nav .active:hover span,
-            .nav .nav .active:focus span {
-                display: none;
-            }
+        .graphnav .graphnav .active span,
+        .graphnav .graphnav .active:hover span,
+        .graphnav .graphnav .active:focus span {
+            display: none;
+        }
 
         .application {
             border-top: 1px solid #c1e1ec;
@@ -124,18 +123,24 @@
             height: 50px;
         }
 
-            footer p {
-                line-height: 50px;
-                margin-bottom: 0;
-            }
+        footer p {
+            line-height: 50px;
+            margin-bottom: 0;
+        }
 
-        @media (min-width:1200px) {
+        @media (min-width: 1200px) {
             .affix,
             .affix-bottom {
                 width: 263px;
             }
         }
     </style>
+
+    <!-- D3 시각화 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8">
+    </script>
+    <link href="vertical.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body data-spy="scroll" data-target=".scrollspy">
     <div class="jumbotron">
@@ -152,7 +157,54 @@
         <div class="row">
 
             <div class="col-md-3 scrollspy">
-                <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
+
+                <div id="graphnav" class="graphnav hidden-xs hidden-sm" data-spy="affix">
+                    <div>
+                        <div class="div_head">
+                            <div class="head1">
+                                <h2 class="heading">Timeline</h2>
+                                <p class="exp">"Range of time is from Jan 2011 to present, ongoing civil war"</p>
+                            </div>
+                            <div class="head2">
+                                <h2 class="heading">Events </h2>
+                                <p class="exp">"Key events during the civil war. Each type of an event is mapped by different color."</p>
+                            </div>
+                            <div class="head3">
+                                <h2 class="heading">Deaths & Refugees</h2>
+                                <p class="exp">"The number of death during the civil war per a month from March 2011 to Nov 2015."</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="div_svg"></div>
+                            <ul style="position: absolute;top: 0px;">
+                                <li><a href="#web-design">Web Design</a></li>
+                                <li>
+                                    <a href="#web-development">Web Development</a>
+                                    <ul class="nav">
+                                        <li><a href="#ruby"><span class="fa fa-angle-double-right"></span>Ruby</a></li>
+                                        <li><a href="#python"><span class="fa fa-angle-double-right"></span>Python</a></li>
+                                        <li><a href="#php"><span class="fa fa-angle-double-right"></span>PHP</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#marketing">Marketing</a></li>
+                                <li><a href="#graphic-design">Graphic Design</a></li>
+                                <li><a href="#logistics">Logistics</a></li>
+                                <li><a href="#social">Social</a></li>
+                                <li><a href="#management">Management</a></li>
+                                <li><a href="#chemistry">Chemistry</a></li>
+                                <li>
+                                    <a href="#mobile-development">Mobile Development</a>
+                                    <ul class="nav">
+                                        <li><a href="#android"><span class="fa fa-angle-double-right"></span>Android</a></li>
+                                        <li><a href="#iOS"><span class="fa fa-angle-double-right"></span>iOS</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#mathematics">Mathematics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--<ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
                     <li><a href="#web-design">Web Design</a></li>
                     <li>
                         <a href="#web-development">Web Development</a>
@@ -176,7 +228,7 @@
                         </ul>
                     </li>
                     <li><a href="#mathematics">Mathematics</a></li>
-                </ul>
+                </ul>-->
             </div>
 
             <div class="col-md-9">
@@ -619,16 +671,19 @@
     <script src="Scripts/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-<script src="Scripts/jquery.easing.min.js"></script>
+    <script src="Scripts/jquery.easing.min.js"></script>
 
     <script>
-        $('#nav').affix({
+        $('#graphnav').affix({
             offset: {
-                top: $('#nav').offset().top,
-                bottom: ($('footer').outerHeight(true) + $('.application').outerHeight(true)) + 40
+                //top: $('#graphnav').offset().top,
+                //bottom: ($('footer').outerHeight(true) + $('.application').outerHeight(true)) + 40
+                top : 1000,
+                bottom: 500
             }
         });
-
     </script>
+
+    <script src="timeline.js"></script>
 </body>
 </html>
