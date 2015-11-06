@@ -46,9 +46,17 @@
     var yAxis1;
 
     //chapter selecor를 그리기위한 날짜
-    var chapter_date = [{start: parseDate("2011-01-01"), end: parseDate("2012-07-01")},
-                        {start: parseDate("2012-07-01"), end: parseDate("2013-07-01")},
-                        {start: parseDate("2013-07-01"), end: parseDate("2015-01-01")}];
+    var chapter_date = [
+        { start: parseDate("2011-01-01"), end: parseDate("2011-07-01") },
+        { start: parseDate("2011-07-01"), end: parseDate("2011-12-01") },
+        { start: parseDate("2012-01-01"), end: parseDate("2012-07-01") },
+        { start: parseDate("2012-07-01"), end: parseDate("2012-12-01") },
+        { start: parseDate("2013-01-01"), end: parseDate("2013-07-01") },
+        { start: parseDate("2013-07-01"), end: parseDate("2013-12-01") },
+        { start: parseDate("2014-01-01"), end: parseDate("2014-07-01") },
+        { start: parseDate("2014-07-01"), end: parseDate("2014-12-01") },
+        { start: parseDate("2015-01-01"), end: parseDate("2015-11-01") }
+    ];
 
     var chapter_selector;
 
@@ -1041,41 +1049,40 @@ function customAxis(g) {
 
 });
 
-        $(document).ready(function () {
-            $("#nav").on("activate.bs.scrollspy", function () {
-                var currentItem = $(".nav li.active > a").text();
-                
-                if(currentItem == "Time-Line"){
-                    console.log(currentItem);
-                    chapter_selector.transition()
-                                    .duration(1000)
-                                    .ease("elastic")
-                                    .attr("height",function(){
-                                        return yScale(chapter_date[0].end)-yScale(chapter_date[0].start);
-                                    })
-                                    .attr("y",yScale(chapter_date[0].start));
+// 타임라인에서 좌표가 옮겨지게 만들기 위한 코드
+$(document).ready(function () {
+    $("#nav").on("activate.bs.scrollspy", function (){
+        var currentItem = $(".nav li.active > a").text();
 
-                }else if(currentItem == "Time-Linetext1"){
-                    console.log(currentItem);
-                     chapter_selector.transition()
-                                    .duration(1000)
-                                    .ease("elastic")
-                                    .attr("height",function(){
-                                        return yScale(chapter_date[1].end)-yScale(chapter_date[1].start);
-                                    })
-                                    .attr("y",yScale(chapter_date[1].start));
+        // 숫자로 잘라낸다
+        var baseLength = "Time-Line-Topic".length;
+        var number = currentItem.substr(baseLength);
 
-                }
-                else if(currentItem == "Time-Linetext2"){
-                    console.log(currentItem);
-                     chapter_selector.transition()
-                                    .duration(1000)
-                                    .ease("elastic")
-                                    .attr("height",function(){
-                                        return yScale(chapter_date[2].end)-yScale(chapter_date[2].start);
-                                    })
-                                    .attr("y",yScale(chapter_date[2].start));
-                }
-                $("#info").empty().html("현재 선택 - " + currentItem);
-            });
-        });
+        // 값 확인
+        console.log(number);
+        console.log(currentItem);
+
+        // 숫자로 변환
+        number = parseInt(number);
+        
+        // 숫자가 아닐 경우, 예외처리. 0으로 만듦
+        if (isNaN(number)) {
+            number = 0;
+        }
+
+        // if문 없이 바로 숫자값으로 실행하도록 변경
+        chapter_selector.transition()
+                        .duration(1000)
+                        .ease("elastic")
+                        .attr("height", function () {
+                            return yScale(chapter_date[number].end) - yScale(chapter_date[number].start);
+                        })
+                        .attr("y", yScale(chapter_date[number].start))
+                        // 왼쪽 시간축의 길이가 120이므로, 이를 뺌
+                        .attr("width", width1 - 120)
+                        ;
+
+        // 화면상에 디버깅을 위한 코드
+        $("#info").empty().html("현재 선택 - " + currentItem);
+    });
+});
