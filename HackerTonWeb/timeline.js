@@ -47,15 +47,15 @@
 
     //chapter selecor를 그리기위한 날짜
     var chapter_date = [
-        { start: parseDate("2011-01-01"), end: parseDate("2011-07-01") },
-        { start: parseDate("2011-07-01"), end: parseDate("2011-12-01") },
-        { start: parseDate("2012-01-01"), end: parseDate("2012-07-01") },
-        { start: parseDate("2012-07-01"), end: parseDate("2012-12-01") },
-        { start: parseDate("2013-01-01"), end: parseDate("2013-07-01") },
-        { start: parseDate("2013-07-01"), end: parseDate("2013-12-01") },
-        { start: parseDate("2014-01-01"), end: parseDate("2014-07-01") },
-        { start: parseDate("2014-07-01"), end: parseDate("2014-12-01") },
-        { start: parseDate("2015-01-01"), end: parseDate("2015-11-01") }
+        { start: parseDate("2011-01-01"), end: parseDate("2011-06-01") },
+        { start: parseDate("2011-05-01"), end: parseDate("2012-07-01") },
+        { start: parseDate("2012-01-01"), end: parseDate("2013-01-01") },
+        { start: parseDate("2013-01-01"), end: parseDate("2013-04-30") },
+        { start: parseDate("2013-04-30"), end: parseDate("2013-09-30") },
+        { start: parseDate("2013-09-30"), end: parseDate("2014-02-30") },
+        { start: parseDate("2014-02-01"), end: parseDate("2014-12-31") },
+        { start: parseDate("2014-09-01"), end: parseDate("2015-10-31") },
+        { start: parseDate("2015-10-01"), end: parseDate("2015-11-31") }
     ];
 
     var chapter_selector;
