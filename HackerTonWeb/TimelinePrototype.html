@@ -116,7 +116,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
+    <!-- Navgation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -340,17 +340,6 @@
     <!-- Custom Theme JavaScript -->
     <script src="Scripts/grayscale.js"></script>
     <script src="timeline.js"></script>
-
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#nav").on("activate.bs.scrollspy", function () {
-                var currentItem = $(".nav li.active > a").text();
-                //해당 이벤트 안에서 코드 변경해줄필요 있음
-                $("#info").empty().html("현재 선택 - " + currentItem);
-            });
-        });
-    </script>
     <script>
         $(function () {
             $('#scrollspy').affix({

@@ -237,6 +237,10 @@
     stroke: #C23355;
     stroke-width: 1px;
 }
+.line_r {
+    stroke: #338866;
+    stroke-width: 1px;
+}
 #death{
     fill: #C23355;
     color: #C23355;
@@ -316,4 +320,8 @@
     cursor:default;
     shape-rendering: crispEdges;
     pointer-events: none;
+}
+.chapter_selector{
+    fill: rgba(255,255,255,0.35);
+    stroke: #880000;
 }
