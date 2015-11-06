@@ -30,6 +30,10 @@
 
     <!-- 맵 테스트 -->
     <style type="text/css">
+        body {
+            position: relative;
+        }
+
         /* Set a size for our map container, the Google Map will take up 100% of this container */
         #map2 {
             width: 50%;
@@ -89,7 +93,7 @@
     </script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top .scrollspy">
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -104,7 +108,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <nav class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
@@ -120,7 +124,7 @@
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -130,7 +134,8 @@
     <header class="intro">
         <!-- /video -->
         <video id="my-video" class="video" style="width: 100%; position: absolute" muted loop>
-            <source src="http://historysigntest.blob.core.windows.net/6planets/intro.mp4" type="video/mp4">
+            <!--로딩을 위해 임시 삭제-->
+            <!--<source src="http://historysigntest.blob.core.windows.net/6planets/intro.mp4" type="video/mp4">-->
         </video>
         <div class="intro" style="position: absolute">
 
@@ -299,10 +304,80 @@
     </section>
 
     <!-- Map Section -->
-    <section id="map-section" class="content-section text-center">
+    <section id="map-section2" class="content-section text-center">
         <!--맵 자체에 margin이 있음-->
         <div id="map"></div>
         <div id="map2"></div>
+    </section>
+
+    <section id="map-section3" class="content-section text-center" style="padding-top: 100px">
+        <div class="row">
+            <!--타임라인 그래프-->
+            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+                <div id="scrollspy" data-spy="affix" class="scrollspy" data-offset-top="500">
+                    <div class="div_column1">
+                        <div class="div_head">
+                            <div class="head1">
+                                <h2 class="heading">Timeline</h2>
+                                <p class="exp">"Timeline of civil war<br>(2011 ~ 2015)"</p>
+                            </div>
+                            <div class="head2">
+                                <h2 class="heading">Events </h2>
+                                <p class="exp">"Key events during the civil war. Each type of an event is mapped by different color."</p>
+                                <form action="">
+                                    <input type="radio" name="category" value="type" checked>type
+                                    <input type="radio" name="category" value="group">group
+                                    <input type="radio" name="category" value="event">event
+                                </form>
+                            </div>
+                            <div class="head3">
+                                <h2 class="heading">Deaths & Refugees</h2>
+                                <p class="exp">"The number of death during the civil war per a month from March 2011 to Nov 2015."</p>
+                            </div>
+                        </div>
+                        <div class="div_svg"></div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
+
+            </div>-->
+
+            <div class="col-xs-5 col-sm-5 col-md-5">
+                <h2>시리아 탈출 인터뷰</h2>
+                <p>
+                    Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.
+                </p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+                <p>
+                    This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
+                </p>
+                <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+            </div>
+        </div>
     </section>
 
     <section id="map-section" class="content-section text-center">
@@ -425,6 +500,26 @@
     <!-- Custom Theme JavaScript -->
     <script src="Scripts/grayscale.js"></script>
     <script src="timeline.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#nav").on("activate.bs.scrollspy", function () {
+                var currentItem = $(".nav li.active > a").text();
+                $("#info").empty().html("Currently you are viewing - " + currentItem);
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#scrollspy').affix({
+                offset: {
+                    top: $('#scrollspy').offset().top,
+                    //bottom: $('#download').offset().top
+                    bottom: 500
+                }
+            });
+        })
+    </script>
 </body>
 
 </html>

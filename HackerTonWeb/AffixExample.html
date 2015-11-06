@@ -141,7 +141,7 @@
     </script>
     <link href="vertical.css" rel="stylesheet" type="text/css" />
 </head>
-<body data-spy="scroll" data-target=".scrollspy">
+<body data-spy="scroll" >
     <div class="jumbotron">
         <div class="container">
             <h1>Playing with Bootstrap</h1>
@@ -157,7 +157,6 @@
 
         <div class="col-md-3 scrollspy">
             <div  id="nav" class="nav hidden-xs hidden-sm" data-spy="affix">
-
                 <h4 id="info" class="text-info">Currently you are viewing - Section 1</h4>
                 <ul>
                     <li><a href="#web-design">Web Design</a></li>
@@ -587,13 +586,6 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            //    removeSection = function (e) {
-            //        $(e).parents(".section").remove();
-            //        $('[data-spy="scroll"]').each(function () {
-            //            var $spy = $(this).scrollspy("refresh");
-            //        });
-            //    }
-            //    $(".scroll-area").scrollspy({ target: "#myNavbar" });
             $("#nav").on("activate.bs.scrollspy", function () {
                 var currentItem = $(".nav li.active > a").text();
                 $("#info").empty().html("Currently you are viewing - " + currentItem);
