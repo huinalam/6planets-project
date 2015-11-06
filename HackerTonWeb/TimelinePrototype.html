@@ -124,9 +124,10 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">6Plants : </span> 시리아 난민
+                    <i class="fa fa-play-circle"></i> <span class="light">6Plants : </span> 시리아 난민
                 </a>
-                <h4 id="info" class="text-info">Section 1</h4>
+                <!--임시-->
+                <label id="info" class="text-info">메뉴 변경에 따른 이벤트 적용</label>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -140,7 +141,12 @@
                         <a class="page-scroll" href="#about">개요</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#map-section">map-section</a>
+                        <a class="page-scroll" href="#time-line">Time-Line</a>
+                        <ul class="nav" hidden="">
+                            <li><a href="#text1"><span class="fa fa-angle-double-right"></span>text1</a></li>
+                            <li><a href="#text2"><span class="fa fa-angle-double-right"></span>text2</a></li>
+                            <li><a href="#text3"><span class="fa fa-angle-double-right"></span>text3</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -152,21 +158,6 @@
         <!-- /.container -->
     </nav>
 
-
-
-    <!--<div data-spy="affix" data-offset-top="600" data-offset-bottom="200">
-            dddddddddddddddddddddddd
-        </div>
-        <script>
-        $('#myAffix').affix({
-      offset: {
-        top: 1000,
-        bottom: function () {
-            return (this.bottom = $('.footer').outerHeight(true));
-        }
-      }
-    })
-        </script>-->
     <!-- Download Section -->
     <section id="about" class="content-section text-center">
         <div class="download-section">
@@ -191,7 +182,7 @@
         </div>
     </section>
 
-    <section id="map-section" class="content-section text-center" style="padding-top: 100px">
+    <section id="time-line" class="content-section text-center" style="padding-top: 100px">
         <div class="row">
             <!--타임라인 그래프-->
             <div 
@@ -258,7 +249,58 @@
                     This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.
                 </p>
                 <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>
+
+                <section id="text1">
+                    <h3>text1</h3>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <button type="button" class="btn btn-primary">Learn More</button>
+                </section><!--end of #ruby-->
+
+                <section id="text2">
+                    <h3>text2</h3>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <button type="button" class="btn btn-primary">Learn More</button>
+                </section><!--end of #python-->
+
+                <section id="text3">
+                    <h3>text3</h3>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <p>
+                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.
+                        Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Nam quam nunc, blandit vel,
+                        luctus pulvinar, hendrerit id, lorem.
+                    </p>
+                    <button type="button" class="btn btn-primary">Learn More</button>
+                </section><!--end of #php-->
             </div>
+
         </div>
     </section>
 
@@ -304,7 +346,8 @@
         $(document).ready(function () {
             $("#nav").on("activate.bs.scrollspy", function () {
                 var currentItem = $(".nav li.active > a").text();
-                $("#info").empty().html("Currently you are viewing - " + currentItem);
+                //해당 이벤트 안에서 코드 변경해줄필요 있음
+                $("#info").empty().html("현재 선택 - " + currentItem);
             });
         });
     </script>
