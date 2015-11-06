@@ -37,7 +37,14 @@
         }
 
         .intro {
-            background: url(http://ironsummitmedia.github.io/startbootstrap-grayscale/img/intro-bg.jpg) no-repeat bottom center scroll;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+83,000000+100&amp;0+45,0.65+70,0.65+74,0.65+79,0.65+80,0.65+83,1+90 */
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0.65) 74%, rgba(0,0,0,0.65) 79%, rgba(0,0,0,0.65) 80%, rgba(0,0,0,0.65) 83%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(45%,rgba(0,0,0,0)), color-stop(70%,rgba(0,0,0,0.65)), color-stop(74%,rgba(0,0,0,0.65)), color-stop(79%,rgba(0,0,0,0.65)), color-stop(80%,rgba(0,0,0,0.65)), color-stop(83%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
         }
 
         p {
@@ -121,12 +128,21 @@
 
     <!-- Intro Header -->
     <header class="intro">
+        <!-- /video -->
+        <video id="my-video" class="video" style="width: 100%; position: absolute" muted loop>
+            <source src="http://historysigntest.blob.core.windows.net/6planets/intro.mp4" type="video/mp4">
+        </video>
+        <div class="intro" style="position: absolute">
+
+        </div>
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">시리아 난민</h1>
-                        <p class="intro-text">시리아 난민 조사<br>6Planets가 조사하였습니다.</p>
+                        <p class="intro-text">
+                            시리아 난민 조사<br>6Planets가 조사하였습니다.
+                        </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
@@ -136,8 +152,16 @@
         </div>
     </header>
 
+    <script>
+        (function () {
+            var video = document.getElementById("my-video");
+            video.addEventListener("canplay", function () {
+                video.play();
+            });
+        })();
 
-<!-- 인터뷰 Section -->
+    </script>
+    <!-- 인터뷰 Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <h2>시리아 배경 설명</h2>
