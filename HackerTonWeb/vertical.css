@@ -8,7 +8,7 @@ body{
 
 }
 h1{
-    line-height: 60%;
+    margin: 0px;
 }
 h1.chapter{
     color: #eeeeee;
@@ -19,6 +19,13 @@ h1.time{
     color: #eeeeee;
     font-size: 15px;
     text-align: left;
+}
+iframe{
+    width: 390px;
+    height: 300px;
+}
+.row {
+    min-width: 1200px;
 }
 .title {
 	  width:1030px;
@@ -35,7 +42,7 @@ h1.time{
 	margin: 40px  auto;
 }
 .div_main{
-	width: 1030px
+	width: 1030px;
 	height: auto;
 	margin: 40px auto 40px auto;
 	text-align: center;
@@ -47,60 +54,60 @@ h1.time{
 	height: auto;
 }
 .div_content{
-    width: 430px;
-    margin: 5px;
-    height: 793px;
+    width: 420px;
+    margin: 10px;
+    height: 850px;
     border: 1px;
     border-style: solid;
     border-color: #ffffff;
-    padding: 10px;
+    padding: 5px;
 }
 .chapter_title{
     font-size: 20px;
-    width: 400px;
-    margin-bottom: 40px;
+    width: 410px;
+    margin-bottom: 20px;
     height: auto;
-    background-color: #000000; 
 }
 .chapter_content{
-    width: 400px;
+    width: 410px;
     height: auto;
-    background-color: #000000; 
     display: inline-block;
 }
 .media_section{
-    width: 400px;
-    height: 250px;
+    text-align: center;
+    width: 410px;
+    height: 320px;
+    font-size: 10px;
+    color: #eeeeee;
+    letter-spacing: 0.8px;
 }
 .who{
     width: 190px;
-    margin: 5px;
     height: 150px;
-    background-color: #000000; 
+    margin: 5px;
     position: relative;
     text-align: left;
     float: left;
+}
+.what{
+    width: 190px;
+    height: 150px;
+    margin: 5px;
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.summary{
+    width: 410px;
+    height: 210px;
+    font-size: 12px;
+    color: #eeeeee;
 }
 .who p{
     font-size: 12px;
 }
-.what{
-    width: 190px;
-    margin: 5px;
-    height: 150px;
-    background-color: #000000; 
-    position: relative;
-    text-align: left;
-    float: left;
-}
 .what p{
     font-size: 12px;
-}
-.summary {
-    width: 410px;
-    height: 270px;
-    background-color: #000000; 
-   
 }
 .summary p{
     font-size: 12px;
