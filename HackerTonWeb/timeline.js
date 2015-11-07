@@ -975,7 +975,7 @@ d3.csv("timeline6.csv", function (d) {
                         .attr("transform", "translate(90,0)")
                         .append("svg")
                         .append("rect")
-                        .attr("width", 200)
+                        .attr("width", width1 - 140)
                         .attr("height", function () {
                             console.log(chapter_date[0]);
                             return yScale(chapter_date[0].end) - yScale(chapter_date[0].start);
