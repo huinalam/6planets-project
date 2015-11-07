@@ -1089,7 +1089,7 @@ $(document).ready(function () {
 
         // 숫자가 아닐 경우, 예외처리. 0으로 만듦
         if (isNaN(number)) {
-            number = 0;
+            number = -1;
         }
         // 값 확인
         //console.log(number);
@@ -1101,9 +1101,9 @@ $(document).ready(function () {
                         .duration(100)
                         .ease("quad")
                         .attr("height", function () {
-                            return yScale(chapter_date[number-1].end) -yScale(chapter_date[number-1].start);
+                            return yScale(chapter_date[number].end) -yScale(chapter_date[number].start);
                         })
-                        .attr("y", yScale(chapter_date[number - 1].start))
+                        .attr("y", yScale(chapter_date[number].start))
                         // 왼쪽 시간축의 길이가 120이므로, 이를 뺌
                         .attr("width", width1 - 140)
         ;
@@ -1113,16 +1113,14 @@ $(document).ready(function () {
         for (var i = 0; i < 10; i++) {
             if (i == number) {
                 d3.select("#t" + i).transition()
-                                .duration(600)
+                                .duration(1000)
                                 .style("opacity", 1);
             }
             else {
                 d3.select("#t" + i).transition()
-                               .duration(600)
+                               .duration(1000)
                                .style("opacity", 0);
             }
         }
-
-
     });
 });
