@@ -235,6 +235,7 @@
     <Content Include="refugees_changes_per_year.csv" />
     <None Include="refugees_map2.json" />
     <Content Include="refugees_sum_year.csv" />
+    <Content Include="timeline6.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

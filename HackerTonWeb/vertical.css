@@ -12,6 +12,14 @@ h1.time{
     font-size: 15px;
     text-align: left;
 }
+
+p.radio{
+    color: #eeeeee;
+    font-family: Helvetica;
+    font-weight: lighter;
+    line-height: 110%;
+    font-size: 10px;
+}
 iframe{
     width: 390px;
     height: 300px;
@@ -332,5 +340,6 @@ iframe{
 }
 .chapter_selector{
     fill: rgba(255,255,255,0.35);
-    stroke: #880000;
+    stroke: #eeeeee;
+    stroke-width: 0.5px
 }

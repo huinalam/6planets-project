@@ -1098,27 +1098,27 @@ $(document).ready(function () {
 
         // if문 없이 바로 숫자값으로 실행하도록 변경
         chapter_selector.transition()
-                        .duration(1000)
-                        .ease("elastic")
+                        .duration(100)
+                        .ease("quad")
                         .attr("height", function () {
-                            return yScale(chapter_date[number].end) - yScale(chapter_date[number].start);
+                            return yScale(chapter_date[number-1].end) -yScale(chapter_date[number-1].start);
                         })
-                        .attr("y", yScale(chapter_date[number].start))
+                        .attr("y", yScale(chapter_date[number - 1].start))
                         // 왼쪽 시간축의 길이가 120이므로, 이를 뺌
                         .attr("width", width1 - 140)
         ;
         // 화면상에 디버깅을 위한 코드
         $("#info").empty().html("현재 선택 - " + currentItem);
 
-        for (var i = 0; i < 9; i++) {
+        for (var i = 0; i < 10; i++) {
             if (i == number) {
                 d3.select("#t" + i).transition()
-                                .duration(2500)
+                                .duration(600)
                                 .style("opacity", 1);
             }
             else {
                 d3.select("#t" + i).transition()
-                               .duration(2500)
+                               .duration(600)
                                .style("opacity", 0);
             }
         }
