@@ -261,6 +261,12 @@ a:focus {
     padding-top: 100px;
 }
 
+
+.center-section {
+    padding-top: 250px;
+}
+
+
 .download-section {
     width: 100%;
     padding: 50px 0;
@@ -278,14 +284,22 @@ a:focus {
     height: 200px;
     margin-top: 100px;
 }
-
+/* 패딩 값을 수정함*/
 @media(min-width:767px) {
     .content-section {
+        padding-top: 50px;
+        padding-bottom: 200px;
+    }
+
+    
+    .center-section {
         padding-top: 250px;
+        padding-bottom: 200px;
     }
 
     .download-section {
-        padding: 100px 0;
+        padding: 50px 0;
+        padding-bottom: 200px;
     }
 
     #map {

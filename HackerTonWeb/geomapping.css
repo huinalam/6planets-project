@@ -1,170 +1,191 @@
 
-p{
-	text-indent: 10px;
-
+p {
+    text-indent: 10px;
 }
+
 .title {
-	 
-	  width:930px;
-	  font-family: 'Roboto Slab', serif;
-	  font-size: 20px;
-	  font-weight: 100;
-	  text-align: center;
-	  letter-spacing: 1.2px;
-	  margin: 20px auto 70px auto;
-	  
+    width: 930px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin: 20px auto 70px auto;
 }
-.title2{
-	font-family: 'Helvetica';
-	font-style: italic;
-	font-size: 25px;
-	color: #44CCAA;
-	line-height: 85%;
+
+.title2 {
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-size: 25px;
+    color: #44CCAA;
+    line-height: 85%;
 }
-.map_title{
-	font-family: 'Helvetica';
-	font-size: 30px;
-	font-style: italic;
-	fill: #EE5588
+
+.map_title {
+    font-family: 'Helvetica';
+    font-size: 30px;
+    font-style: italic;
+    fill: #EE5588;
 }
-.wrapper{
-	width: 860px;
-	margin: 40px  auto;
+
+.wrapper {
+    width: 860px;
+    margin: 40px auto;
 }
-.geo_div_main{
-	width: 860px
-	height: 768px;
-	text-align: center;
-	display: inline-block;
+
+.geo_div_main {
+    width: 860px height: 768px;
+    text-align: center;
+    display: inline-block;
 }
-.geo_div_column1{
-	width: 550px;
-	margin: 5px;
-	height: 758px;
-	text-align: center;
-	position: relative;
-	float: left;
+
+.geo_div_column1 {
+    width: 550px;
+    margin: 5px;
+    height: 758px;
+    text-align: center;
+    position: relative;
+    float: left;
 }
-.geo_div_column2{
-	width: 280px;
-	margin: 5px 5px 5px 15px;
-	height: 758px;
-	text-align:left;
-	position: relative;
-	float:left;
+
+.geo_div_column2 {
+    width: 280px;
+    margin: 5px 5px 5px 15px;
+    height: 758px;
+    text-align: left;
+    position: relative;
+    float: left;
 }
-.div_svg1{
-	width: 540px;
-	margin: 0px 5px;
-	padding:5px;
-	height:530px;
+
+.div_svg1 {
+    width: 540px;
+    margin: 0px 5px;
+    padding: 5px;
+    height: 530px;
 }
-.div_text1{
-	letter-spacing: 1.2px;
-	line-height: 140%;
+
+.div_text1 {
+    letter-spacing: 1.2px;
+    line-height: 140%;
     font-family: 'Jeju Myeongjo';
-    font-size: 0.9rem;
-	color: #d65577;
-	text-align: left;
-	width: 500px;
-	margin: 0px 5px;
-	padding: 0px 20px;
-	height: auto;
+    font-size: 10px;
+    color: #d65577;
+    text-align: left;
+    width: 500px;
+    margin: 0px 5px;
+    padding: 0px 20px;
+    height: auto;
 }
-.div_svg2{
-	text-align: center;
-	width: 250px;
-	margin: 5px;
-	padding-top: 80px;
-	height:270px;
-}
-.div_text2{
 
-	letter-spacing: 1.2px;
-	line-height: 140%;
-	font-size: 0.9rem;
-	text-align: left;
-	color: #66bb99;
-	width: 250px;
-	margin: 5px;
-	padding: 20px 5px 5px 5px;
-	height: auto;
+.div_svg2 {
+    text-align: center;
+    width: 250px;
+    margin: 5px;
+    padding-top: 80px;
+    height: 270px;
 }
+
+.div_text2 {
+    letter-spacing: 1.2px;
+    line-height: 140%;
+    font-size: 10px;
+    text-align: left;
+    color: #66bb99;
+    width: 250px;
+    margin: 5px;
+    padding: 60px 5px 5px 5px;
+    height: auto;
+}
+
+    .div_text2 p {
+        font-size: 14px;
+    }
+
 .buttons-container {
-		margin-top: 30px;
-		align: center;
-		height:100%;  
-		padding: 5px;      
- }
- .button {
-	  font: 'Helvetica Neu';
-	  color: #cccccc;
-	  display: inline-block;
-	  margin-left: 10px;
-	  margin-top: 0px;
-	  margin-bottom: 0px;
-	  font-weight: lighter;
-	  cursor: pointer;
-	  font-size: 12px;
- }
- .year-selector{
- 	text-align: center;
- 	margin-bottom: 8px;
- 	font-family: 'Helvetica';
-	font-style: italic;
-	font-weight: lighter;
-	color: #cccccc;
- }
- .selected {
- 	  color: #C23355;
- 	  font-style: underline;
- 	  font-size: 14px;
-      font-weight: bold;
- }
-.pp{
-	fill: #333333;
-	stroke: #88aacc;
-	stroke-width: 0.5px;
+    margin-top: 30px;
+    align: center;
+    height: 100%;
+    padding: 5px;
 }
- .map_label{
- 	fill: #338866;
- 	background-color: #ffcc00;
- 	font: 'Helvetica Neue';
- 	font-weight: lighter;
- 	font-size: 10px;
- 	letter-spacing: 1.5px;
- }
- .syria_label{
- 	fill: #eeeeee;
- 	font: 'Helvetica Neue';
- 	font-weight: bold;
- 	font-size: 10px;
- 	letter-spacing: 1.5px;
- }
- .map_number{
- 	fill: #eeeeee;
- 	background-color: #ffcc00;
- 	font-family: "Courier New";
- 	font-weight: lighter;
- 	font-size: 10px;
- 	letter-spacing: 1.5px;
- }
- .pie_text{
- 	font-family: "Courier New";
- 	fill: #eeeeee;
- 	z-index: 0;
- }
- .dev{
- 	fill: #338866;
- 	font-size: 9px;
 
- }
- .me{
- 	fill: #C23355;
- 	font-size: 9px;
- }
-.map_legend_text{
-	font-family: "Courier New";
-	fill: #cccccc;
-	font-size: 9px;
+.button {
+    font: 'Helvetica Neu';
+    color: #cccccc;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.year-selector {
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-weight: lighter;
+    color: #cccccc;
+}
+
+.selected {
+    color: #C23355;
+    font-style: underline;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pp {
+    fill: #333333;
+    stroke: #88aacc;
+    stroke-width: 0.5px;
+}
+
+.map_label {
+    fill: #338866;
+    background-color: #ffcc00;
+    font: 'Helvetica Neue';
+    font-weight: lighter;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.syria_label {
+    fill: #eeeeee;
+    font: 'Helvetica Neue';
+    font-weight: bold;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.map_number {
+    fill: #eeeeee;
+    background-color: #ffcc00;
+    font-family: "Courier New";
+    font-weight: lighter;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.pie_text {
+    font-family: "Courier New";
+    fill: #eeeeee;
+    z-index: 0;
+}
+
+.dev {
+    fill: #338866;
+    font-size: 9px;
+}
+
+.me {
+    fill: #C23355;
+    font-size: 9px;
+}
+
+.map_legend_text {
+    font-family: "Courier New";
+    fill: #cccccc;
+    font-size: 9px;
 }
