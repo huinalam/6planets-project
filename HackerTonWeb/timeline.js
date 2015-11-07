@@ -1081,7 +1081,7 @@ $(document).ready(function () {
         var currentItem = $(".nav li.active > a").text();
 
         // 숫자로 잘라낸다
-        var baseLength = "Time-Line-Topic".length;
+        var baseLength = "10-Time-LineTopic".length;
         var number = currentItem.substr(baseLength);
 
         // 숫자로 변환
