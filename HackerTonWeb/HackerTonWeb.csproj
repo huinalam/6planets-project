@@ -134,8 +134,17 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="customScroll.js" />
+    <Content Include="flag.css" />
+    <Content Include="flag.html" />
+    <Content Include="flag.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\intro.mp4" />
+    <Content Include="media\crop_bright.jpg" />
+    <Content Include="media\crop_dark.jpg" />
+    <Content Include="media\syria1.jpg" />
+    <Content Include="media\syria2.jpg" />
+    <Content Include="media\syria3.jpg" />
+    <Content Include="media\syria4.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="timeline.js" />
@@ -239,7 +248,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="media\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

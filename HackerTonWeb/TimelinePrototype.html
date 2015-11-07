@@ -28,8 +28,12 @@
 
     <!-- D3 시각화 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8">
+    
     </script>
-    <link href="vertical.css" rel="stylesheet" type="text/css" />
+
+    <!--D3 커스텀-->
+    <link href="vertical.css" rel="stylesheet" type="text/css"/>
+    <link href="flag.css" rel="stylesheet" type="text/css" />
 
     <!-- 맵 테스트 -->
     <style type="text/css">
@@ -41,13 +45,24 @@
         }
 
         .intro {
-            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+83,000000+100&amp;0+45,0.65+70,0.65+74,0.65+79,0.65+80,0.65+83,1+90 */
-            background: -moz-linear-gradient(top, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 70%, rgba(0,0,0,0.65) 74%, rgba(0,0,0,0.65) 79%, rgba(0,0,0,0.65) 80%, rgba(0,0,0,0.65) 83%, rgba(0,0,0,1) 90%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(45%,rgba(0,0,0,0)), color-stop(70%,rgba(0,0,0,0.65)), color-stop(74%,rgba(0,0,0,0.65)), color-stop(79%,rgba(0,0,0,0.65)), color-stop(80%,rgba(0,0,0,0.65)), color-stop(83%,rgba(0,0,0,0.65)), color-stop(90%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* IE10+ */
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 45%,rgba(0,0,0,0.65) 70%,rgba(0,0,0,0.65) 74%,rgba(0,0,0,0.65) 79%,rgba(0,0,0,0.65) 80%,rgba(0,0,0,0.65) 83%,rgba(0,0,0,1) 90%,rgba(0,0,0,1) 100%); /* W3C */
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+13,0+17,0.3+31,0.65+73,1+100 */
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0) 17%, rgba(0,0,0,0.3) 31%, rgba(0,0,0,0.65) 73%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(13%,rgba(0,0,0,0)), color-stop(17%,rgba(0,0,0,0)), color-stop(31%,rgba(0,0,0,0.3)), color-stop(73%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+        }
+
+        .gradation-section {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+-1,0+0,0+0,0.3+5,0.3+6,0.3+11,0.3+11,0.3+11,0.65+22,0.65+41,0.65+41,0.65+41,0.65+41,0.65+50,0.65+50,1+92 */
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) -1%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 5%, rgba(0,0,0,0.3) 6%, rgba(0,0,0,0.3) 11%, rgba(0,0,0,0.65) 22%, rgba(0,0,0,0.65) 41%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(-1%,rgba(0,0,0,0)), color-stop(0%,rgba(0,0,0,0)), color-stop(5%,rgba(0,0,0,0.3)), color-stop(6%,rgba(0,0,0,0.3)), color-stop(11%,rgba(0,0,0,0.3)), color-stop(22%,rgba(0,0,0,0.65)), color-stop(41%,rgba(0,0,0,0.65)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(92%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* W3C */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
         }
 
@@ -142,7 +157,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">무너져가는 시리아 : Team 6Planets</span>
+                    <i class="fa fa-play-circle"></i> <span class="light">시리아 내전 데이터 시각화 : Team 6Planets</span>
                 </a>
                 <!--임시-->
                 <label id="info" class="text-info" hidden="">메뉴 변경에 따른 이벤트 적용</label>
@@ -153,63 +168,75 @@
                 <ul id="nav" class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a href="#page-top" id="scroll0"></a>
+                        <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story1" id="scroll1">1</a>
+                        <a class="page-scroll" href="#story1" id="scroll0">1</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story2" id="scroll2">2</a>
+                        <a class="page-scroll" href="#story2" id="scroll1">2</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story3" id="scroll3">3</a>
+                        <a class="page-scroll" href="#story3" id="scroll2">3</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story4" id="scroll4">4</a>
+                        <a class="page-scroll" href="#story4" id="scroll3">4</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#story5" id="scroll4">5</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#story6" id="scroll5">6</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#story7" id="scroll6">7</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#story8" id="scroll7">8</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#story9" id="scroll8">9</a>
                     </li>
                     <li value="0">
                         <a class="page-scroll" href="#time-line-">Time-Line-</a>
                         <ul class="nav" hidden="">
                             <li value="0">
-                                <a class="page-scroll" href="#topic0" id="scroll5"><span class="fa fa-angle-double-right"></span>Topic0</a>
+                                <a class="page-scroll" href="#topic0" id="scroll9"><span class="fa fa-angle-double-right"></span>Topic0</a>
                             </li>
                             <li value="1">
-                                <a class="page-scroll" href="#topic1" id="scroll6"><span class="fa fa-angle-double-right"></span>Topic1</a>
+                                <a class="page-scroll" href="#topic1" id="scroll10"><span class="fa fa-angle-double-right"></span>Topic1</a>
                             </li>
                             <li value="2">
-                                <a class="page-scroll" href="#topic2" id="scroll7"><span class="fa fa-angle-double-right"></span>Topic2</a>
+                                <a class="page-scroll" href="#topic2" id="scroll11"><span class="fa fa-angle-double-right"></span>Topic2</a>
                             </li>
                             <li value="3">
-                                <a class="page-scroll" href="#topic3" id="scroll8"><span class="fa fa-angle-double-right"></span>Topic3</a>
+                                <a class="page-scroll" href="#topic3" id="scroll12"><span class="fa fa-angle-double-right"></span>Topic3</a>
                             </li>
                             <li value="4">
-                                <a class="page-scroll" href="#topic4" id="scroll9"><span class="fa fa-angle-double-right"></span>Topic4</a>
+                                <a class="page-scroll" href="#topic4" id="scroll13"><span class="fa fa-angle-double-right"></span>Topic4</a>
                             </li>
                             <li value="5">
-                                <a class="page-scroll" href="#topic5" id="scroll10"><span class="fa fa-angle-double-right"></span>Topic5</a>
+                                <a class="page-scroll" href="#topic5" id="scroll14"><span class="fa fa-angle-double-right"></span>Topic5</a>
                             </li>
                             <li value="6">
-                                <a class="page-scroll" href="#topic6" id="scroll11"><span class="fa fa-angle-double-right"></span>Topic6</a>
+                                <a class="page-scroll" href="#topic6" id="scroll15"><span class="fa fa-angle-double-right"></span>Topic6</a>
                             </li>
                             <li value="7">
-                                <a class="page-scroll" href="#topic7" id="scroll12"><span class="fa fa-angle-double-right"></span>Topic7</a>
+                                <a class="page-scroll" href="#topic7" id="scroll16"><span class="fa fa-angle-double-right"></span>Topic7</a>
                             </li>
                             <li value="8">
-                                <a class="page-scroll" href="#topic8" id="scroll13"><span class="fa fa-angle-double-right"></span>Topic8</a>
+                                <a class="page-scroll" href="#topic8" id="scroll17"><span class="fa fa-angle-double-right"></span>Topic8</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story6" id="scroll14">6</a>
+                        <a class="page-scroll" href="#story11" id="scroll18">11</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story7" id="scroll15">7</a>
+                        <a class="page-scroll" href="#story12" id="scroll19">12</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story8" id="scroll16">8</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#story9" id="scroll17">9</a>
+                        <a class="page-scroll" href="#story13" id="scroll20">13</a>
                     </li>
                 </ul>
             </div>
@@ -225,21 +252,14 @@
             <!--로딩을 위해 임시 삭제-->
             <source src="http://historysigntest.blob.core.windows.net/6planets/intro.mp4" type="video/mp4">
         </video>
-        <div class="intro" style="position: absolute">
-
-        </div>
+        <div class="intro" style="position: absolute"></div>
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading" style="font-size: 90px">무너져가는 시리아</h1>
+                        <h1 class="brand-heading" style="font-size: 80px">시리아 내전에 관한<br />데이터 시각화</h1>
                         <p class="intro-text" style="font-size: 22px">
-                            2011년 '아랍의 봄' 이후 시리아 민주화를 둘러싸고 일어난 내전은<br>
-                            유엔조차도 사망자 집계를 포기했을 정도로 혼란 상태이다.<br>
-                            시리아를 덮친 것은 전쟁과 죽음의 공포만이 아니다.<br>
-                            4년 동안 시리아는 전 국민의 80%가 빈곤층인 ‘빈곤국가’로 전락했다.<br>
-                            국민의 30%는 생필품과 기본적인 음식물마저 구할 수 없는 극빈층이고,<br>
-                            57.7%는 실업상태이다.<br>
+                            2011년 '아랍의 봄' 이후  시리아 내전은 여전히 진행 중이다.<br>
                         </p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
@@ -259,33 +279,97 @@
         })();
     </script>
 
-    <!-- 스토리 2 : “사람이 전쟁보다 귀하다.” -->
+    <!-- 스토리 2  -->
     <section id="story2" class="center-section text-center">
+        <div style="background-image: url('media/crop_bright.jpg'); width: 100%; height: 50%; position: absolute; margin-top: 00px;"></div>
+        <div class="gradation-section" style="width: 100%; height: 50%; position: absolute; margin-top: 00px;"></div>
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1>“사람이 전쟁보다 귀하다.”</h1><span>스베틀라나 알렉시예비치</span>
-                    <!-- 체르노빌의 목소리 저자, 링크 주면 어떨까?-->
-                    <p></p>
-                    <p>인간의 잔인함 속에서 살아남은 사람들의</p>
-                    <p>잊혀진 목소리를 찾아서</p>
-                    <!--<a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>-->
+                    <p style="text-align: left">
+                        2011년 아랍의 봄은 아랍에 민주화의 물결을 몰고 왔다.<br />그러나 한편으론 그 혼란으로 여전히 시리아는 전쟁의 공포에서 벗어나지 못하고 있다.<br />2015년 7월 기준으로 신원이 확인된 사망자 숫자만 하루에 약 100명 이상이 있다.<br />
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 스토리 3 : (3으로 나누었지만 2번 인터뷰와 연결) -->
-    <section id="story3" class="content-section text-center">
+    <!-- 스토리 3  -->
+    <section id="story3" class="center-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1>인터뷰</h1>
-                    <!-- 체르노빌의 목소리 저자, 링크 주면 어떨까?-->
                     <p></p>
                     <p style="text-align: left">
+                        게다가 시리아를 덮친 시련은 전쟁의 공포만이 아니다. 매일 마주하는 배고픔과 실업의 고통이다. 2011년 부터 현재까지 4년 동안 전 국민 80%가 빈곤층이 되었다. 국민의 30%는 기본적인 음식조차 구할 수 없으며, 57.7%는 실업상태에 있다.
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                        <br /> 미디어에서는 우리의 진짜 이야기를 들려주지 않는다. 우리나라를 둘러싼 주변의 이야기만 보여준다. 하지만 나의 이야기가 지금 기록이 되어, 고향에 남겨진 평범한 이들의 목소리가 울려 퍼질 수 있다면 기꺼이 말하겠다.<br /><br /> 알레포 대학에서 시험을 치는 날이 생각난다. 모든 학생들이 시험을 치르고 있었다. 이윽고 학생들의 숨죽인 소리는 곧 굉음에 매몰되어 버렸다. 숨소리가 사라져가듯 사람들도 스러져갔다. 세상의 종말을 알리는 소리와 공포와 두려움으로 가득찬 죽음의 냄새들이 학교를 가득채웠다. 지옥이 바로 나의 눈 앞에 있었다(⋯)<br /><br /> 우리나라에서는 정부군이 병원을 관리하고 있었다. 만약 정부군에 대항하는 시위를 하다가 다쳐서 병원에 가면 그 자리에서 체포되었다. 그리곤 죽였다. 그래서 우리나라에는 지하에 비밀 병원들이 하나 둘씩 생겨나기 시작했고, 거길 도와주는 사람들도 많아지고 있었다. 나의 소중한 친구인 무함마드도 그중 한 명이었다. 그는 의대생이기도 했기 때문이다. 어느 날 정부군이 친구의 차를 수색하다가 바늘과 약품들을 발견했고 (잠시 침묵한다.) 바로 쏴 죽였다. 그렇게 한 목숨이, 순식간에(⋯)<br />
+    <!-- 스토리 4 -->
+    <section id="story4" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- 시리아 국기를 이용한 시각화 -->
+                    <div class="flag_div" width="800" heigh="500"></div>
+                    <p></p>
+                    <p style="text-align: left">
+                        희생자가 기하급수적으로 늘어나고 현장에 접근하기 힘들어졌다.
+                        결국 유엔은 시리아 내전의 사망자 집계를 포기했다.<br/>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스토리 5 -->
+    <section id="story5" class="center-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>“시아파? 수니파? 이것만이 내전의 원인은 아니다.”</h2>
+                    <p></p>
+                    <p style="text-align: left">
+                        시리아 내전의 혼란을 시리아 내부의 종파적 갈등으로 해석할 수 있다.<br />
+                        그러나 시리아 내전을 둘러싼 갈등은 그렇게 단순하지 않다.<br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스토리 6 -->
+    <section id="story6" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- 구글 지도 -->
+                    <p></p>
+                    <p style="text-align: left">
+                        시리아는 동서양을 잇는 문명과 물질의 교차점인 지중해 동안에 위치한 나라이다.<br /><br />
+                        지정학적 이유로 시리아는 수천 년 동안 그리스, 로마, 아랍-이슬람 제국, 오스만투르크, 프랑스 등 다양한 국가의 통치를 받았으며, 1946년에 독립하였다. 그 과정에서 다원화된 국민 구성원을 갖추고, 다양한 종교적 분파들이 공존하게 되었다.<br /><br />
+                        지리적으로 강한 세력들 사이에 있는 시리아는 주변 정세가 불안해왔다. 중동 지역 내에서는 이란과 레바논의 헤즈볼라 세력은 현 대통령 알 아사드 정권에 우호적이다. 미국을 중심으로한 서방세계는 반정부 세력을 지지한다. 그러나 시리아에 부동항을 둔 러시아는 아사드 정권을 지지한다. 이처럼 시리아는 여러 국가의 이권과 우호적 관계를 사이에서 국가의 운명이 좌지우지 되고 있다.
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스토리 7 -->
+    <section id="story7" class="center-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>시리아 내전은 수 많은 난민을 발생시켰다.</h2>
+                    <p></p>
+                    <p style="text-align: left">
+                        살아남기 위한 난민들의 고군분투는 여전히 진행중이다.
+                        <br />
                     </p>
                 </div>
             </div>
@@ -293,8 +377,9 @@
     </section>
 
 
-    <!-- 스토리 4 : 지도 맵핑-->
-    <section id="story4" class="content-section text-center">
+
+    <!-- 스토리 8 : 지도 맵핑-->
+    <section id="story8" class="content-section text-center">
         <div class="no-margin-section">
             <div class="container">
                 <div class="title">
@@ -302,9 +387,9 @@
                 </div>
                 <div class="col-lg-8" align="right">
                     <div class="geo_div_main">
-                    <div class="button-selector">
-                        <div class="year-selector">please select an year</div>
-                    </div>
+                        <div class="button-selector">
+                            <div class="year-selector">please select an year</div>
+                        </div>
                         <div class="geo_div_column1">
                             <div class="div_svg1"></div>
                             <div class="div_text1">
@@ -330,12 +415,28 @@
         </div>
     </section>
 
+    <!-- 스토리 9 -->
+    <section id="story9" class="center-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>잔혹의 4년,<br />아직 끝나지 않은 시리아 전쟁</h2>
+                    <p></p>
+                    <p style="text-align: left">
+                        참혹한 시리아 내전은 아직도 진행중이다.
+                        <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- 스토리 5 : 타임라인 -->
+
+    <!-- 스토리 10 : 타임라인 -->
     <section id="time-line-" class="content-section text-center" style="padding-top: 100px">
         <div class="row">
             <!--타임라인 그래프-->
-            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-2 col-md-offset-2">
+            <div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
                 <div id="scrollspy" data-spy="affix" class="scrollspy">
                     <div class="div_column1">
                         <div style="height: 80px">　</div>
@@ -523,10 +624,12 @@
                         </div>
                         <div class="media_section">
 
-                        <div id="fb-root"></div><script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"><a href="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"></a><p>لحظة استهداف الطيران الحربي الروسي لمدينة #الرستن بريف #حمص صباح اليوم #روسيا_تقصف_سوريا #سورية #سوريا</p>Posted by ‎<a href="https://www.facebook.com/HalabTodayTV/">Halab Today TV قناة حلب اليوم</a>‎ on Thursday, October 29, 2015</blockquote></div></div>
+                            <div id="fb-root"></div>
+                            <script>(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3"; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script><div class="fb-video" data-allowfullscreen="1" data-href="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"><a href="https://www.facebook.com/HalabTodayTV/videos/1245602272123875/"></a><p>لحظة استهداف الطيران الحربي الروسي لمدينة #الرستن بريف #حمص صباح اليوم #روسيا_تقصف_سوريا #سورية #سوريا</p>Posted by ‎<a href="https://www.facebook.com/HalabTodayTV/">Halab Today TV قناة حلب اليوم</a>‎ on Thursday, October 29, 2015</blockquote></div></div>
 
 
-                        *이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
+                            *이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.
+                        </div>
                         <div class="chapter_content">
                             <h2 class="heading">Type of Events &amp; Group involved in</h2>
                             <p>10번의 전투와 10번의 국제사회의 군사개입이 있었는데, 미국이 ISIS 진영을 폭격하였으며 Russia는 미국과 같은 명분으로 공군화력을 동원하였으나 실제로는 반군세력 및 의료시설 공격한 것에 대한 비판을 받고있다.</p>
@@ -558,65 +661,40 @@
         </div>
     </section>
 
-    <!-- 스토리 6 : 주변국의 대리전이 된 시리아 -->
-    <section id="story6" class="content-section text-center">
+    <!-- 스토리 11 -->
+    <section id="story11" class="center-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1>주변국의 대리전이 된 시리아 </h1>
+                    <h2>그들은 고향으로 돌아갈 수 있을 것인가</h2>
+                    <p></p>
+                    <p style="text-align: left">
+                        러시아는 IS를 대상으로 핵공격을 위해 NATO와 접촉하였다. 미국은 핵무기 사용으로 인해 핵확산에 확산에 영향을 주게 될까봐 우려하고 있다. 그러나 러시아는 자국민 보호와 응징을 위해 단호한 입장을 보이고 있다.<br /><br />
+                        시리아의 평화는 여전히 요원해 보인다.<br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 스토리 12 -->
+    <section id="story12" class="center-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>“사람이 전쟁보다 귀하다.”</h1><span>스베틀라나 알렉시예비치</span>
                     <!-- 체르노빌의 목소리 저자, 링크 주면 어떨까?-->
                     <p></p>
-                    <p style="text-align: left">
-                        <br />
-                        시리아는 동서양을 잇는 문명과 물질의 교차점인 지중해 동안에 위치한 나라이다. 서쪽으로는 이스라엘, 레바논과 남쪽으로는 요르단, 동쪽으로는 이라크, 북쪽으로는 터키와 국경을 접하고 있다. 지정학적 이유로 시리아는 수천 년 동안 그리스, 로마, 아랍-이슬람 제국, 오스만투르크, 프랑스 등 다양한 국가의 통치를 받았으며, 1946년에 독립하였다. 그 과정에서 풍부하고 다채로운 문화유산이 축적되었고, 국민 구성도 다원화 되었다. 예를 들어, 시리아는 이슬람 수니파가 79%, 시아파의 분파인 알라위파와 드루즈파가 11%, 나머지는 다양한 기독교 교파들이 공존하는 분포를 보인다. 특정 종교집단이 특정 지역에 집중적으로 거주하므로 지역마다 토착 세력의 권한이 강력하다.<br /><br />
-                        중동 지역 내에서는 이란과 레바논의 헤즈볼라 세력은 현 대통령 알 아사드 정권에 우호적이며, 전적으로 지원하는 행태를 보인다. 한편 순니파(수니파) 중심의 아랍 국가들과 터키 등은 반정부 세력을 물질적, 외교적으로 지지하고 있으며, 국제사회에서 미국을 중심으로 하는 서방 세계는 반정부 세력을 지지한다. 러시아는 아사드 정권을 지지하고, 중국은 공공연하게 아사드 정권을 지지하는 것은 아니지만 모호한 입장을 보이고 암묵적으로 지원한다.
-                    </p>
+                    <p>인간의 잔인함 속에서 살아남은 사람들의</p>
+                    <p>잊혀진 목소리를 찾아서</p>
+                    <!--<a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>-->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 스토리 7 : 그들은 고향으로 돌아갈 수 있을 것인가 -->
-    <section id="story7" class="center-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h1>그들은 고향으로 돌아갈 수 있을 것인가</h1>
-                    <!-- 체르노빌의 목소리 저자, 링크 주면 어떨까?-->
-                    <p></p>
-                    <p style="text-align: left">
-                        <br />
-                        민족적으로 분열된 사회일수록 갈등이 고조되고, 집단 간에 경쟁이 발생할 경우 폭력성이 높아지며, 집단의 생존을 위해 같은 세력의 조직화가 일어나게 된다. 시리아는 다양한 인구 구성을 가지고 있는 국가이므로 알라위파인 아사드 정권은 강력한 군사력과 통제력을 발휘하여 다양한 구성 집단을 하나로 묶어 국가를 유지해왔다.
-                        <br />
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 스토리 8 -->
-    <section id="story8" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <p></p>
-                    <p style="text-align: left">
-                        <br />
-                        시리아 내전의 초기 단계에서 집권 세력인 아사드 정권은 반란 세력을 제압하고자  비상사태법 해제, 내각 총사퇴, 일부 정치범 석방, 전국민 대화위원회구성 등의 다소 온화한 방법에서 무력진압, 반란 세력 전멸등의 폭력을 행사하는 방향으로 과격화되었다. 반대로 알카에다를 비롯한 이슬람 극단주의의 반란세력은 그들의 영향력을 극대화 하기 위해 내전 초기부터 극단적인 방법을 사용하기도 하였다. 이로 인해 시리아 반정부 운동은 테러리스트에 의해 주도 되는 혁명이라는 이미지로 변질되었다. 정부와 반정부 세력의 무력 충돌로 폭력의 강도는 점차 심해지고, 집권세력은 결국 매우 수위 높은 폭력(화학 무기의 사용)을 행사하게 되었다.
-                        <br /><br />
-                        시리아 내전은 시리아의 사회, 경제적 기반을 파괴 시킬 뿐 만 아니라, 수많은 문화유산을 훼손시키고 있다. 수천 년의 역사를 간직한 알레포 구시가지, 팔미라 유적지를 비롯하여 수많은 모스크, 성채, 구시가지 등이 내전으로 인해 훼손되거나 약탈당했다.
-                        <br /><br />
-                        결국 시리아에서는 아사드 정권 측과 반정부 세력 중 어느 한 편이 눈에 띄게 우세를 보이고도 않고, 확실한 정치적 대안도 못한 채 교전이 계속 발생하고 있는 상황이다. 그리고 과격한 성향의 이슬람 무장 조직의  세력 확장과 쿠르드족의 분리 독립 움직임이 활발해 지면서 내전을 악화시키고 있다.
-
-                        <br />
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 스토리 9 : 함께 만든 사람들 -->
-    <section id="story9" class="content-section text-center">
+    <!-- 스토리 13 : 함께 만든 사람들 -->
+    <section id="story13" class="center-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -643,7 +721,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <p>Copyleft &copy; 6Planets 2015</p>
         </div>
     </footer>
 
@@ -666,7 +744,7 @@
     <script src="geomapping.js"></script>
     <script>
         $(function () {
-            var story = $('#story6').offset();
+            var story = $('#story11').offset();
             var bot = document.body.scrollHeight - story.top;
             console.log("bottom : " + bot);
             $('#scrollspy').affix({
@@ -682,8 +760,11 @@
 
     <!--스크롤-->
     <script src="customScroll.js"></script>
+    <script src="flag.js">
+    </script>
     <script>
-        CustomMovingScroll(18);
+        // 총 갯수
+        CustomMovingScroll(20 + 1);
     </script>
     <!--
     <a href="#target1" class="scroll" id="scroll1">Scroll to target</a>

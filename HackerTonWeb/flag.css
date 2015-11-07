@@ -1,0 +1,29 @@
+.flag0{
+	fill: #aa1133;
+}
+.flag1{
+	fill: #eeeeee;
+}
+.flag2{
+	fill: #222222;
+}
+.text0{
+	fill: #ff7788;
+	font-size: 60px;
+	font-family: Helvetica;
+}
+.text1{
+	fill: #222222;
+	font-size: 60px;
+	font-family: Helvetica;
+}
+.text2{
+	fill: #eeeeee;
+	font-size: 60px;
+	font-family: Helvetica;
+}
+.kill{
+	fill: #ff0000;
+	font-size: 45px;
+	font-family: Helvetica;
+}
