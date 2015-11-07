@@ -10,7 +10,7 @@ p{
 	text-indent: 10px;
 
 }
-.geo_title {
+.title {
 	 
 	  width:930px;
 	  font-family: 'Roboto Slab', serif;
@@ -21,31 +21,31 @@ p{
 	  margin: 20px auto 70px auto;
 	  
 }
-.geo_title2{
+.title2{
 	font-family: 'Helvetica';
 	font-style: italic;
 	font-size: 25px;
 	color: #44CCAA;
 	line-height: 85%;
 }
-.geo_map_title{
+.map_title{
 	font-family: 'Helvetica';
 	font-size: 30px;
 	font-style: italic;
 	fill: #EE5588
 }
-.geo_wrapper{
+.wrapper{
 	width: 860px;
 	margin: 40px  auto;
 }
-.geo_div_main{
+.div_main{
 	width: 860px
 	height: 768px;
 	text-align: center;
 	background-color: #222222;
 	display: inline-block;
 }
-.geo_div_column1{
+.div_column1{
 	width: 550px;
 	margin: 5px;
 	height: 758px;
@@ -54,7 +54,7 @@ p{
 	position: relative;
 	float: left;
 }
-.geo_div_column2{
+.div_column2{
 	width: 280px;
 	margin: 5px 5px 5px 15px;
 	height: 758px;
@@ -63,18 +63,18 @@ p{
 	position: relative;
 	float:left;
 }
-.geo_div_svg1{
+.div_svg1{
 	width: 540px;
 	margin: 0px 5px;
 	padding:5px;
 	height:530px;
 	background-color: #222222;
 }
-.geo_div_text1{
-	letter-spacing: 1.geo_2px;
+.div_text1{
+	letter-spacing: 1.2px;
 	line-height: 140%;
     font-family: 'Jeju Myeongjo';
-    font-size: 0.geo_9rem;
+    font-size: 0.9rem;
 	color: #d65577;
 	text-align: left;
 	width: 500px;
@@ -83,7 +83,7 @@ p{
 	height: auto;
 	background-color: #222222;
 }
-.geo_div_svg2{
+.div_svg2{
 	text-align: center;
 	width: 250px;
 	margin: 5px;
@@ -91,11 +91,11 @@ p{
 	height:270px;
 	background-color: #222222;
 }
-.geo_div_text2{
+.div_text2{
 
-	letter-spacing: 1.geo_2px;
+	letter-spacing: 1.2px;
 	line-height: 140%;
-	font-size: 0.geo_9rem;
+	font-size: 0.9rem;
 	text-align: left;
 	color: #66bb99;
 	width: 250px;
@@ -104,13 +104,13 @@ p{
 	height: auto;
 	background-color: #222222;
 }
-.geo_buttons-container {
+.buttons-container {
 		margin-top: 30px;
 		align: center;
 		height:100%;  
 		padding: 5px;      
  }
- .geo_button {
+ .button {
 	  font: 'Helvetica Neu';
 	  color: #cccccc;
 	  display: inline-block;
@@ -121,7 +121,7 @@ p{
 	  cursor: pointer;
 	  font-size: 12px;
  }
- .geo_year-selector{
+ .year-selector{
  	text-align: center;
  	margin-bottom: 8px;
  	font-family: 'Helvetica';
@@ -129,18 +129,18 @@ p{
 	font-weight: lighter;
 	color: #cccccc;
  }
- .geo_selected {
+ .selected {
  	  color: #C23355;
  	  font-style: underline;
  	  font-size: 14px;
       font-weight: bold;
  }
-.geo_pp{
+.pp{
 	fill: #333333;
 	stroke: #88aacc;
 	stroke-width: 0.5px;
 }
- .geo_map_label{
+ .map_label{
  	fill: #338866;
  	background-color: #ffcc00;
  	font: 'Helvetica Neue';
@@ -148,14 +148,14 @@ p{
  	font-size: 10px;
  	letter-spacing: 1.5px;
  }
- .geo_syria_label{
+ .syria_label{
  	fill: #eeeeee;
  	font: 'Helvetica Neue';
  	font-weight: bold;
  	font-size: 10px;
  	letter-spacing: 1.5px;
  }
- .geo_map_number{
+ .map_number{
  	fill: #eeeeee;
  	background-color: #ffcc00;
  	font-family: "Courier New";
@@ -163,21 +163,21 @@ p{
  	font-size: 10px;
  	letter-spacing: 1.5px;
  }
- .geo_pie_text{
+ .pie_text{
  	font-family: "Courier New";
  	fill: #eeeeee;
  	z-index: 0;
  }
- .geo_dev{
+ .dev{
  	fill: #338866;
  	font-size: 9px;
 
  }
- .geo_me{
+ .me{
  	fill: #C23355;
  	font-size: 9px;
  }
-.geo_map_legend_text{
+.map_legend_text{
 	font-family: "Courier New";
 	fill: #cccccc;
 	font-size: 9px;

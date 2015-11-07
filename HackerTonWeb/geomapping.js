@@ -126,7 +126,7 @@
 
         popData1 = data1.filter(function(d) {return d.year == year});
 
-		d3.json("refugees_map2.geojson", function(json){   	//시라이+중동+아프리카+유럽 포함된 지도. 
+		d3.json("refugees_map2.json", function(json){   	//시라이+중동+아프리카+유럽 포함된 지도. 
 
 		map_json = json;
 

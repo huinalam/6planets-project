@@ -133,6 +133,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="customScroll.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\intro.mp4" />
     <Content Include="Scripts\bootstrap.js" />
@@ -189,6 +190,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="frequency.csv" />
     <Content Include="involved.csv" />
+    <Content Include="involved2.csv" />
     <None Include="Properties\PublishProfiles\6planets.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\grayscale.js" />
@@ -205,10 +207,12 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="timelin.js" />
     <Content Include="timeline.css" />
     <Content Include="TimelinePrototype.html" />
     <Content Include="vertical.css" />
+    <Content Include="geomapping.css" />
+    <Content Include="geomapping.js" />
+    <Content Include="index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -228,6 +232,9 @@
     <Content Include="timeline4.csv" />
     <Content Include="timeline5.csv" />
     <Content Include="timeline_example.csv" />
+    <Content Include="refugees_changes_per_year.csv" />
+    <None Include="refugees_map2.json" />
+    <Content Include="refugees_sum_year.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
