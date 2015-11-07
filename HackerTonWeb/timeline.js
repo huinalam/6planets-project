@@ -1098,8 +1098,8 @@ $(document).ready(function () {
 
         // if문 없이 바로 숫자값으로 실행하도록 변경
         chapter_selector.transition()
-                        .duration(100)
-                        .ease("quad")
+                        .duration(400)
+                        .ease("bounce")
                         .attr("height", function () {
                             return yScale(chapter_date[number].end) -yScale(chapter_date[number].start);
                         })

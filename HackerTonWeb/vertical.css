@@ -4,12 +4,12 @@ h1{
 }
 h1.chapter{
     color: #eeeeee;
-    font-size: 20px;
+    font-size: 15px;
     text-align: left;
 }
 h1.time{
     color: #eeeeee;
-    font-size: 15px;
+    font-size: 13px;
     text-align: left;
 }
 
@@ -54,13 +54,13 @@ iframe{
 	height: auto;
 }
 .div_content{
-    width: 420px;
-    margin: 10px;
+    width: 430px;
+    margin: -10px  10px 10px 10px;
     height: 850px;
     border: 1px;
     border-style: solid;
-    border-color: #ffffff;
-    padding: 5px;
+    border-color: #000000;
+    padding: 15px;
 }
 .chapter_title{
     font-size: 20px;
@@ -69,39 +69,33 @@ iframe{
     height: auto;
 }
 .chapter_content{
-    width: 410px;
+    width: 400px;
     height: auto;
     display: inline-block;
+    margin: 20px 0px 20px 0;
+}
+
+.chapter_content p{
+   margin: 0px;
+   font-size: 12px;
+   text-align: left;
+   color: #bbbbbb;
+
 }
 .media_section{
     text-align: center;
-    width: 410px;
+    width: 400px;
     height: 320px;
     font-size: 10px;
-    color: #eeeeee;
+    color: #bbbbbb;
     letter-spacing: 0.8px;
-}
-.who{
-    width: 190px;
-    height: 150px;
-    margin: 5px;
-    position: relative;
-    text-align: left;
-    float: left;
-}
-.what{
-    width: 190px;
-    height: 150px;
-    margin: 5px;
-    position: relative;
-    text-align: left;
-    float: left;
+    margin: 40px 0px 20px 0;
 }
 .summary{
-    width: 410px;
+    width: 400px;
     height: 210px;
     font-size: 12px;
-    color: #eeeeee;
+    margin: 20px 0px 20px 0;
 }
 .who p{
     font-size: 12px;
@@ -111,7 +105,7 @@ iframe{
 }
 .summary p{
     font-size: 12px;
-    color: #eeeeee;
+    color: #bbbbbb;
     text-align: left;
 }
 .div_head{
@@ -153,6 +147,8 @@ iframe{
     font-family: Helvetica;
     font-weight: bold;
     font-size: 15px;
+    margin:5px;
+    text-align: left;
 }
 .exp{
     color: #eeeeee;
@@ -339,7 +335,7 @@ iframe{
     pointer-events: none;
 }
 .chapter_selector{
-    fill: rgba(255,255,255,0.35);
+    fill: rgba(255,255,255,0.2);
     stroke: #eeeeee;
     stroke-width: 0.5px
 }
