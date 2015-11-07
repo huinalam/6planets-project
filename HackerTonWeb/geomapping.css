@@ -1,11 +1,4 @@
-body{
-	width: 90%;
-	background-color: #222222;
-    font-family: Helvetica;
-    color: white;
-    letter-spacing: 1.2px;
-    margin: 40px  auto;
-}
+
 p{
 	text-indent: 10px;
 
@@ -38,27 +31,24 @@ p{
 	width: 860px;
 	margin: 40px  auto;
 }
-.div_main{
+.geo_div_main{
 	width: 860px
 	height: 768px;
 	text-align: center;
-	background-color: #222222;
 	display: inline-block;
 }
-.div_column1{
+.geo_div_column1{
 	width: 550px;
 	margin: 5px;
 	height: 758px;
-	background-color: #222222;
 	text-align: center;
 	position: relative;
 	float: left;
 }
-.div_column2{
+.geo_div_column2{
 	width: 280px;
 	margin: 5px 5px 5px 15px;
 	height: 758px;
-	background-color: #222222;
 	text-align:left;
 	position: relative;
 	float:left;
@@ -68,7 +58,6 @@ p{
 	margin: 0px 5px;
 	padding:5px;
 	height:530px;
-	background-color: #222222;
 }
 .div_text1{
 	letter-spacing: 1.2px;
@@ -81,7 +70,6 @@ p{
 	margin: 0px 5px;
 	padding: 0px 20px;
 	height: auto;
-	background-color: #222222;
 }
 .div_svg2{
 	text-align: center;
@@ -89,7 +77,6 @@ p{
 	margin: 5px;
 	padding-top: 80px;
 	height:270px;
-	background-color: #222222;
 }
 .div_text2{
 
@@ -102,7 +89,6 @@ p{
 	margin: 5px;
 	padding: 20px 5px 5px 5px;
 	height: auto;
-	background-color: #222222;
 }
 .buttons-container {
 		margin-top: 30px;
