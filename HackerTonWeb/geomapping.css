@@ -10,7 +10,7 @@ p {
     font-weight: 100;
     text-align: center;
     letter-spacing: 1.2px;
-    margin: 20px auto 70px auto;
+    margin: 10px auto 70px auto;
 }
 
 .title2 {
@@ -34,13 +34,14 @@ p {
 }
 
 .geo_div_main {
-    width: 860px height: 768px;
+    width: 860px;
+    height: 768px;
     text-align: center;
     display: inline-block;
 }
 
 .geo_div_column1 {
-    width: 550px;
+    width: 580px;
     margin: 5px;
     height: 758px;
     text-align: center;
@@ -58,7 +59,7 @@ p {
 }
 
 .div_svg1 {
-    width: 540px;
+    width: 570px;
     margin: 0px 5px;
     padding: 5px;
     height: 530px;
@@ -67,15 +68,17 @@ p {
 .div_text1 {
     letter-spacing: 1.2px;
     line-height: 140%;
-    font-family: 'Jeju Myeongjo';
     font-size: 10px;
     color: #d65577;
     text-align: left;
-    width: 500px;
+    width: 530px;
     margin: 0px 5px;
-    padding: 0px 20px;
+    padding: 0px 10px;
     height: auto;
-}
+}   
+    .div_text1 p {
+        font-size: 14px;
+    }
 
 .div_svg2 {
     text-align: center;
