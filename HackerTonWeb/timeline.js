@@ -63,7 +63,7 @@
     var body = d3.select("body");
 
     var legend_list1 =["civil_war","intervention_m","intervention_p","agreement","remarkable"];
-    var legend_list2 =["UN","US","Russia","Assad regime","Hezbollah","Iran","Kurds","rebel"];
+    var legend_list2 =["International power","Assad regime","Islamic power","Rebel","ISIS"];
     
     var main_svg = d3.select(".div_svg").append("svg") // 월별 난민 발생수를 bar chart
                     .attr("width",width1)
@@ -786,7 +786,6 @@ function customAxis(g) {
     d3.csv("frequency.csv", function(data){ 
 
         data.forEach(function (item){               
-
                         item.date = parseDate(item.date);
                         item.interventionM = +item.interventionM;
                         item.interventionP = +item.interventionP;
@@ -797,10 +796,10 @@ function customAxis(g) {
 
         var frequency = chart.append("g")
                             .attr("class","frequency")
-                            .attr("transform","translate(0,0)");
+                            .attr("transform","translate(90,0)");
 
         var civil_war_g = frequency.append("g")
-                            .attr("transform","translate(140,0)")
+                            .attr("transform","translate(33,0)")
                             .selectAll("circle")
                             .data(data)
                             .enter()
@@ -815,7 +814,7 @@ function customAxis(g) {
                             .attr("id","death");
 
         var interventionP_g = frequency.append("g")
-                            .attr("transform","translate(180,0)")
+                            .attr("transform","translate(66,0)")
                             .selectAll("circle")
                             .data(data)
                             .enter()
@@ -830,7 +829,7 @@ function customAxis(g) {
                             .attr("id","intervention_p");
 
         var interventionM_g = frequency.append("g")
-                            .attr("transform","translate(220,0)")
+                            .attr("transform","translate(99,0)")
                             .selectAll("circle")
                             .data(data)
                             .enter()
@@ -845,7 +844,7 @@ function customAxis(g) {
                             .attr("id","intervention_m");
 
         var remarkable_g = frequency.append("g")
-                            .attr("transform","translate(260,0)")
+                            .attr("transform","translate(132,0)")
                             .selectAll("circle")
                             .data(data)
                             .enter()
@@ -859,10 +858,24 @@ function customAxis(g) {
                             })
                             .attr("id","remarkable");
 
+        var agreement_g = frequency.append("g")
+                            .attr("transform","translate(165,0)")
+                            .selectAll("circle")
+                            .data(data)
+                            .enter()
+                            .append("circle")
+                            .attr("cx",0)
+                            .attr("cy",function(d,i){
+                                return yScale(d.date);
+                            })
+                            .attr("r",function(d){
+                                return d.agreement * 2;
+                            })
+                            .attr("id","agreement");
 
     });
 
-    d3.csv("involved.csv", function(data){ 
+    d3.csv("involved2.csv", function(data){ 
 
             data.forEach(function (item){               
 
@@ -870,37 +883,24 @@ function customAxis(g) {
                             item.Iran = +item.Iran;
                             item.Assad = +item.Assad;
                             item.UN = +item.UN;
-                            item.Rabel = +item.Rabel;
+                            item.Rebel = +item.Rebel;
                             item.Russia = +item.Russia;
-                            item.Hezabollah = +item.Hezabollah;
+                            item.Hezbollah = +item.Hezbollah;
                             item.Kurds = +item.Kurds;
                             item.ISIS = +item.ISIS;
                             item.US = +item.US;
+                            item.Saudi = +item.Saudi;
+                            item.Turkey = +item.Turkey;
               
                         });
 
             var involved_g = chart.append("g")
                                 .attr("class","involved")
-                                .attr("transform","translate(0,0)")
+                                .attr("transform","translate(90,0)")
                                 .attr("opacity",0);
 
-            var Iran_g = involved_g.append("g")
-                                .attr("transform","translate(140,0)")
-                                .selectAll("circle")
-                                .data(data)
-                                .enter()
-                                .append("circle")
-                                .attr("cx",0)
-                                .attr("cy",function(d,i){
-                                    return yScale(d.date);
-                                })
-                                .attr("r",function(d){
-                                    return d.Iran * 2;
-                                })
-                                .attr("id","iran");
-
             var Assad_g = involved_g.append("g")
-                                .attr("transform","translate(180,0)")
+                                .attr("transform","translate(33,0)")
                                 .selectAll("circle")
                                 .data(data)
                                 .enter()
@@ -915,7 +915,7 @@ function customAxis(g) {
                                 .attr("id","assad");
 
             var Rebel_g = involved_g.append("g")
-                                .attr("transform","translate(220,0)")
+                                .attr("transform","translate(66,0)")
                                 .selectAll("circle")
                                 .data(data)
                                 .enter()
@@ -929,8 +929,38 @@ function customAxis(g) {
                                 })
                                 .attr("id","rebel");
 
-            var Hezabollah_g = involved_g.append("g")
-                                .attr("transform","translate(260,0)")
+            var Islamic_g = involved_g.append("g")
+                                .attr("transform","translate(99,0)")
+                                .selectAll("circle")
+                                .data(data)
+                                .enter()
+                                .append("circle")
+                                .attr("cx",0)
+                                .attr("cy",function(d,i){
+                                    return yScale(d.date);
+                                })
+                                .attr("r",function(d){
+                                    return (d.Iran+ d.Hezbollah  + d.Kurds  + d.Saudi  + d.Turkey) * 2;
+                                })
+                                .attr("id","islamic");
+
+            var Int_g = involved_g.append("g")
+                                .attr("transform","translate(132,0)")
+                                .selectAll("circle")
+                                .data(data)
+                                .enter()
+                                .append("circle")
+                                .attr("cx",0)
+                                .attr("cy",function(d,i){
+                                    return yScale(d.date);
+                                })
+                                .attr("r",function(d){
+                                    return (d.UN + d.Russia + d.US) * 2;
+                                })
+                                .attr("id","int");
+
+            var isis_g = involved_g.append("g")
+                                .attr("transform","translate(165,0)")
                                 .selectAll("circle")
                                 .data(data)
                                 .enter()
@@ -942,7 +972,7 @@ function customAxis(g) {
                                 .attr("r",function(d){
                                     return d.ISIS * 2;
                                 })
-                                .attr("id","hezbolah");
+                                .attr("id","isis");
 
             chapter_selector = chart.append("g")
                             .attr("transform","translate(90,0)")
@@ -1045,9 +1075,8 @@ function customAxis(g) {
     timeline.yAxis();
     timeline.band();
 
-     
-
 });
+
 
 // 타임라인에서 좌표가 옮겨지게 만들기 위한 코드
 $(document).ready(function () {
@@ -1058,10 +1087,6 @@ $(document).ready(function () {
         var baseLength = "Time-Line-Topic".length;
         var number = currentItem.substr(baseLength);
 
-        // 값 확인
-        console.log(number);
-        console.log(currentItem);
-
         // 숫자로 변환
         number = parseInt(number);
         
@@ -1069,7 +1094,11 @@ $(document).ready(function () {
         if (isNaN(number)) {
             number = 0;
         }
+              // 값 확인
+        //console.log(number);
+        console.log(currentItem);
 
+        
         // if문 없이 바로 숫자값으로 실행하도록 변경
         chapter_selector.transition()
                         .duration(1000)
@@ -1081,8 +1110,22 @@ $(document).ready(function () {
                         // 왼쪽 시간축의 길이가 120이므로, 이를 뺌
                         .attr("width", width1 - 120)
                         ;
-
         // 화면상에 디버깅을 위한 코드
         $("#info").empty().html("현재 선택 - " + currentItem);
+
+        for(var i=0; i<9; i++){
+            if(i==number){
+            d3.select("#t" + i).transition()
+                            .duration(2500)
+                            .style("opacity",1);
+            }
+            else{
+             d3.select("#t" + i).transition()
+                            .duration(2500)
+                            .style("opacity",0);
+            }
+        }
+
+
     });
 });

@@ -20,6 +20,9 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!--geomapping CSS -->
+    <link href="geomapping.css" rel="stylesheet" type="text/css" />
+
     <!-- Google Map JS-->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
 
@@ -42,58 +45,59 @@
 
         /* 타임라인 토픽의 간격을 맞추기 위함 */
         .timeline-topic {
-                padding-top: 400px;
+            padding-top: 600px;
+            padding-bottom: -600px;
         }
 
         .graphnav {
             background: #4baac8;
         }
 
-            .graphnav a {
-                color: black;
-                font-style: italic;
-            }
+        .graphnav a {
+            color: black;
+            font-style: italic;
+        }
 
-            .graphnav li a:hover,
-            .graphnav li a:focus {
-                background: #86c5da;
-            }
+        .graphnav li a:hover,
+        .graphnav li a:focus {
+            background: #86c5da;
+        }
 
-            .graphnav .active {
-                font-weight: bold;
-                background: #72bcd4;
-            }
+        .graphnav .active {
+            font-weight: bold;
+            background: #72bcd4;
+        }
 
-            .graphnav .graphnav {
-                display: none;
-            }
+        .graphnav .graphnav {
+            display: none;
+        }
 
-            .graphnav .active .nav {
-                display: block;
-            }
+        .graphnav .active .nav {
+            display: block;
+        }
 
-            .graphnav .graphnav a {
-                font-weight: normal;
-                font-size: .85em;
-            }
+        .graphnav .graphnav a {
+            font-weight: normal;
+            font-size: .85em;
+        }
 
-            .graphnav .graphnav span {
-                margin: 0 5px 0 2px;
-            }
+        .graphnav .graphnav span {
+            margin: 0 5px 0 2px;
+        }
 
-            .graphnav .graphnav .active a,
-            .graphnav .graphnav .active:hover a,
-            .graphnav .graphnav .active:focus a {
-                font-weight: bold;
-                padding-left: 30px;
-                border-left: 5px solid black;
-            }
+        .graphnav .graphnav .active a,
+        .graphnav .graphnav .active:hover a,
+        .graphnav .graphnav .active:focus a {
+            font-weight: bold;
+            padding-left: 30px;
+            border-left: 5px solid black;
+        }
 
-            .graphnav .graphnav .active span,
-            .graphnav .graphnav .active:hover span,
-            .graphnav .graphnav .active:focus span {
-                display: none;
-            }
+        .graphnav .graphnav .active span,
+        .graphnav .graphnav .active:hover span,
+        .graphnav .graphnav .active:focus span {
+            display: none;
+        }
 
         .application {
             border-top: 1px solid #c1e1ec;
@@ -225,147 +229,147 @@
             </div>
             <!--<div class="div_column1 col-xs-5 col-sm-5 col-md-5 col-sm-offset-1 col-md-offset-1">
 
-            </div>-->
-            <div class="col-xs-5 col-sm-5 col-md-5">
-                <!-- topic0 -->
-                <section id="topic0">
-                <div class="div_content">
-            <div class="chapter_title">
-                <h1 class="chapter">1.Peacefull Protest</h1>
-                <h1 class="time">&nbsp;&nbsp;(2011 March ~ 2011 June)</h1>  
-            </div>
-            <div class="media_section">
-                  <iframe width="390" height="300" src="https://www.youtube.com/embed/l0G2dEUh2-k?list=PL87C9A52B0697A056" frameborder="0" allowfullscreen></iframe>
-                  <br>*Damascus의 시위대에 발포하는 경찰. 시위 날짜 미상. 영상 업로드 날짜 2011.04.29
-            </div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+        </div>-->
+        <div class="col-xs-5 col-sm-5 col-md-5">
+            <!-- topic0 -->
+            <section id="topic0" class="timeline-topic">
+                <div class="div_content" id="t0">
+                    <div class="chapter_title">
+                        <h1 class="chapter">1.Peacefull Protest</h1>
+                        <h1 class="time">&nbsp;&nbsp;(2011 March ~ 2011 June)</h1>  
+                    </div>
+                    <div class="media_section">
+                      <iframe width="390" height="300" src="https://www.youtube.com/embed/l0G2dEUh2-k?list=PL87C9A52B0697A056" frameborder="0" allowfullscreen></iframe>
+                      <br>*Damascus의 시위대에 발포하는 경찰. 시위 날짜 미상. 영상 업로드 날짜 2011.04.29
+                  </div>
+                  <div class="chapter_content">
+                    <div class="what">
+                        <h2 class="heading">Type of events</h2>
+                        <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
+                    <div class="who">
+                        <h2 class="heading">Who involved?</h2>
+                        <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
                 </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>Arab Spring이 전 중동지역에 퍼질 무렵, 소도시 Deraa에서 반정부적인 메세지를 담은 낙서를한 이유로 10대 소년들이 체포되서 고문을 당한다. 이를 계기로 이 학생들 및 정치수용범들의 석방을 요구하는 시위들이 전국에 퍼져나가며, Alepo와 Damascus에서 있었던 분노의 날(Day of Rage)이라고 명명된 3월 15일 시위에서 처음으로 정부군이 시위대에게 발포를 시작하며 사상자가 발생한다. USDOT(미국 재무부)의 조사에 따르면 Assad 정권의 가장 큰 동맹인 이란은 3월달에 민간항공기를 이용해서 파병전문부대인 IRGC-QF의 병력들을 시리아에 수송시켰다고 한다.</p>
-            </div>
-        </div>
-                </section>
+                <div class="summary"><h2 class="heading">Summary</h2>
+                  <p>Arab Spring이 전 중동지역에 퍼질 무렵, 소도시 Deraa에서 반정부적인 메세지를 담은 낙서를한 이유로 10대 소년들이 체포되서 고문을 당한다. 이를 계기로 이 학생들 및 정치수용범들의 석방을 요구하는 시위들이 전국에 퍼져나가며, Alepo와 Damascus에서 있었던 분노의 날(Day of Rage)이라고 명명된 3월 15일 시위에서 처음으로 정부군이 시위대에게 발포를 시작하며 사상자가 발생한다. USDOT(미국 재무부)의 조사에 따르면 Assad 정권의 가장 큰 동맹인 이란은 3월달에 민간항공기를 이용해서 파병전문부대인 IRGC-QF의 병력들을 시리아에 수송시켰다고 한다.</p>
+              </div>
+          </div>
+      </section>
 
-                <!-- topic1 -->
-                <section id="topic1" class="timeline-topic">
-                 <div class="div_content">
+      <!-- topic1 -->
+      <section id="topic1" class="timeline-topic">
+         <div class="div_content" id="t1">
             <div class="chapter_title">
                 <h1 class="chapter">2.Early war</h1>
                 <h1 class="time">&nbsp;&nbsp;(2011 May ~ 2012 July)</h1>  
             </div>
             <div class="media_section">
-            <iframe width="390" height="300" src="https://www.youtube.com/embed/yEeDsvQX5II" frameborder="0" allowfullscreen></iframe><br>
-            *민간인이 2011년 7월 4일에 찍은 야간에 Hama도시로 진하는 기갑부대</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                <iframe width="390" height="300" src="https://www.youtube.com/embed/yEeDsvQX5II" frameborder="0" allowfullscreen></iframe><br>
+                *민간인이 2011년 7월 4일에 찍은 야간에 Hama도시로 진하는 기갑부대</div>
+                <div class="chapter_content">
+                    <div class="what">
+                        <h2 class="heading">Type of events</h2>
+                        <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
+                    <div class="who">
+                        <h2 class="heading">Who involved?</h2>
+                        <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
                 </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>전국적으로 시위가 퍼지게되자 정부군은 2011년 5월경 Homs Daraa 그리고 Damscus를 중심으로 기갑병력을 배치하기 시작하며 이에 미국은 경제 재제로 반응한다. 시민들에 대한 무력진압이 격화되자 정부군에서 탈영한 병력의 수가 증가하였으며 2011년 6월경 전직 대령인 XXXX를 중심으로 반정부군부대인 Free Syria Army가 탄생한다. 전직 공안경찰의 증언에 따르면 같은해 7월부터 10월까지 Assad정권은 흉악범으로 수감중인 지하디스트들을 무장까지 시켜 석방을 시키는데 이는 외부에서 반군세력들을 지원하기 어렵게하기 위함이었다고 한다. 같은해 7월에는 정부군이 Hama에서 일어난 대규모 시위를 진압하는 과정에서 216며 이상의의 사망자가 발생한다.</p>
-            </div>
-        </div>
-                </section>
+                <div class="summary"><h2 class="heading">Summary</h2>
+                  <p>전국적으로 시위가 퍼지게되자 정부군은 2011년 5월경 Homs Daraa 그리고 Damscus를 중심으로 기갑병력을 배치하기 시작하며 이에 미국은 경제 재제로 반응한다. 시민들에 대한 무력진압이 격화되자 정부군에서 탈영한 병력의 수가 증가하였으며 2011년 6월경 전직 대령인 XXXX를 중심으로 반정부군부대인 Free Syria Army가 탄생한다. 전직 공안경찰의 증언에 따르면 같은해 7월부터 10월까지 Assad정권은 흉악범으로 수감중인 지하디스트들을 무장까지 시켜 석방을 시키는데 이는 외부에서 반군세력들을 지원하기 어렵게하기 위함이었다고 한다. 같은해 7월에는 정부군이 Hama에서 일어난 대규모 시위를 진압하는 과정에서 216며 이상의의 사망자가 발생한다.</p>
+              </div>
+          </div>
+      </section>
 
-                <!-- topic2 -->
-                <section id="topic2" class="timeline-topic">
-                <div class="div_content">
+      <!-- topic2 -->
+      <section id="topic2" class="timeline-topic">
+        <div class="div_content" id="t2">
             <div class="chapter_title">
                 <h1 class="chapter">3.Involvement of Islamic Power</h1>
                 <h1 class="time">&nbsp;&nbsp;(2012 Jan ~ 2013 Jan)</h1>  
             </div>
             <div class="media_section">
-            <iframe width="390" height="300" src="https://www.youtube.com/embed/Y3HM3yAMVq8" frameborder="0" allowfullscreen></iframe><br>
-            *탈영한 시리아군의 장교들이 이란과 Hezbollah의 내전 개입을 비판하고 있다.</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                <iframe width="390" height="300" src="https://www.youtube.com/embed/Y3HM3yAMVq8" frameborder="0" allowfullscreen></iframe><br>
+                *탈영한 시리아군의 장교들이 이란과 Hezbollah의 내전 개입을 비판하고 있다.</div>
+                <div class="chapter_content">
+                    <div class="what">
+                        <h2 class="heading">Type of events</h2>
+                        <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
+                    <div class="who">
+                        <h2 class="heading">Who involved?</h2>
+                        <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
                 </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>2012년에는 아랍의 여러 세력들이 시리아 내전에 직.간접적으로 관여하게 된다. 분리독립을 원하는 Kurds족은 민명대 및 최고 의원회를 조직하며 북부일부지역을 점령한다. 이란은 민간항공기를 이용해서 아사드 정권을 지원하기 위해 군병력 및 무기를 시리아로 수송한다. 더불어 보병 각개전투 전술이 뛰어난 동시에 이란과 시리아군의 통역이 가능한 레바논 기반 무장단체 Hezbollah가 정부군의 주요 동맹으로서 전투에 배치되기 시작한다. 이란-Hezbollah-시라아의 끈끈한 동맹관계는 비단 이슬람 분파뿐만 아니라 시리아가 이스라엘을 견제하는데 중요한 역할을 하기때문에 형성되 전략적인 관계라는 분석이있다. (Interview from Jaleh Gholami). 2012년 10월부터 2013년 1월까지 약 3개월만에  al-Qusayr를 비롯한 7개의  도시에서 전투가 주로 반군과 Assad정권간의 전투가 일어났고 2012년 11월에는 북부지역인 Ras al-Ayn에서는 크루드족의 민병대인 YPG와 반군세력간의 전투가 있었으며 YPG가 지역을 점령하는 것으로 마무리되었다. 반면 반군세력은 같은해 12월 Damascus의 교외지역에 군사기지를 마련한다.</p>
-            </div>
-        </div>
-                </section>
+                <div class="summary"><h2 class="heading">Summary</h2>
+                  <p>2012년에는 아랍의 여러 세력들이 시리아 내전에 직.간접적으로 관여하게 된다. 분리독립을 원하는 Kurds족은 민명대 및 최고 의원회를 조직하며 북부일부지역을 점령한다. 이란은 민간항공기를 이용해서 아사드 정권을 지원하기 위해 군병력 및 무기를 시리아로 수송한다. 더불어 보병 각개전투 전술이 뛰어난 동시에 이란과 시리아군의 통역이 가능한 레바논 기반 무장단체 Hezbollah가 정부군의 주요 동맹으로서 전투에 배치되기 시작한다. 이란-Hezbollah-시라아의 끈끈한 동맹관계는 비단 이슬람 분파뿐만 아니라 시리아가 이스라엘을 견제하는데 중요한 역할을 하기때문에 형성되 전략적인 관계라는 분석이있다. (Interview from Jaleh Gholami). 2012년 10월부터 2013년 1월까지 약 3개월만에  al-Qusayr를 비롯한 7개의  도시에서 전투가 주로 반군과 Assad정권간의 전투가 일어났고 2012년 11월에는 북부지역인 Ras al-Ayn에서는 크루드족의 민병대인 YPG와 반군세력간의 전투가 있었으며 YPG가 지역을 점령하는 것으로 마무리되었다. 반면 반군세력은 같은해 12월 Damascus의 교외지역에 군사기지를 마련한다.</p>
+              </div>
+          </div>
+      </section>
 
-                <!-- topic3 -->
-                <section id="topic3" class="timeline-topic">
-                  <div class="div_content">
+      <!-- topic3 -->
+      <section id="topic3" class="timeline-topic">
+          <div class="div_content" id="t3">
             <div class="chapter_title">
                 <h1 class="chapter">4.Supports for Rebel</h1>
                 <h1 class="time">&nbsp;&nbsp;(2013 Jan ~ 2013 April)</h1>  
             </div>
             <div class="media_section">
-            <iframe width="390" height="300" src="https://www.youtube.com/embed/cRSOMqixkIo" frameborder="0" allowfullscreen></iframe><br>
-            *Raqqa를 탈환 후에 시민들이 전 대통령인 Hafez al-assad의 동상을 무너트리고있다.</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                <iframe width="390" height="300" src="https://www.youtube.com/embed/cRSOMqixkIo" frameborder="0" allowfullscreen></iframe><br>
+                *Raqqa를 탈환 후에 시민들이 전 대통령인 Hafez al-assad의 동상을 무너트리고있다.</div>
+                <div class="chapter_content">
+                    <div class="what">
+                        <h2 class="heading">Type of events</h2>
+                        <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
+                    <div class="who">
+                        <h2 class="heading">Who involved?</h2>
+                        <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
                 </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>이란과 Hezbollah의 Assad 정권을 향한 지원이 거세지자, 그들과 상반되는 이익관계를 갖고 있는 사우디 아라비아가 터키를 통해서 반군을 지원하기 시작한다. 이 반군세력의 많은 부분이 순수하게 정부군과 싸우는  FSA가 아닌 극단주의 무장단체였으며, 미국은 사우디 아라비아에게 이들에 대한 지원을 중단하라고 요구하지만 이를 묵살당한다. 같은해 3월 4일 반군은 내전이 시작된 이후 정부군의 점령에 있었던 Raqqa를 이틀간의 전투끝에 탈환하였고 이후에 정부군은 25번 이상의 공중폭격을 가하지만 재탈환에는 실패한다. 같은해 4월 오바마는 CIA를 통해 반군들을 훈련시키는 프로그램을 승인한다.</p>
-            </div>
-        </div>
-                </section>
+                <div class="summary"><h2 class="heading">Summary</h2>
+                  <p>이란과 Hezbollah의 Assad 정권을 향한 지원이 거세지자, 그들과 상반되는 이익관계를 갖고 있는 사우디 아라비아가 터키를 통해서 반군을 지원하기 시작한다. 이 반군세력의 많은 부분이 순수하게 정부군과 싸우는  FSA가 아닌 극단주의 무장단체였으며, 미국은 사우디 아라비아에게 이들에 대한 지원을 중단하라고 요구하지만 이를 묵살당한다. 같은해 3월 4일 반군은 내전이 시작된 이후 정부군의 점령에 있었던 Raqqa를 이틀간의 전투끝에 탈환하였고 이후에 정부군은 25번 이상의 공중폭격을 가하지만 재탈환에는 실패한다. 같은해 4월 오바마는 CIA를 통해 반군들을 훈련시키는 프로그램을 승인한다.</p>
+              </div>
+          </div>
+      </section>
 
-                <!-- topic4 -->
-                <section id="topic4" class="timeline-topic">
-                <div class="div_content">
+      <!-- topic4 -->
+      <section id="topic4" class="timeline-topic">
+        <div class="div_content" id="t4">
             <div class="chapter_title">
                 <h1 class="chapter">5.Escalation of the war &amp; Born of ISIS</h1>
                 <h1 class="time">&nbsp;&nbsp;(2013 April ~ 2013 Sep)</h1>  
             </div>
             <div class="media_section">
-            <iframe width="390" height="300" src="https://www.youtube.com/embed/39txvvDdFxA" frameborder="0" allowfullscreen></iframe>
-            *정부군이 Hezbollah와 al-Quasayr지역을 탈환할 당시의 전투 영상</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                <iframe width="390" height="300" src="https://www.youtube.com/embed/39txvvDdFxA" frameborder="0" allowfullscreen></iframe>
+                *정부군이 Hezbollah와 al-Quasayr지역을 탈환할 당시의 전투 영상</div>
+                <div class="chapter_content">
+                    <div class="what">
+                        <h2 class="heading">Type of events</h2>
+                        <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+                    </div>
+                    <div class="who">
+                        <h2 class="heading">Who involved?</h2>
+                    </div>
                 </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-                         <p>2013년 4월경 시라이에 있었던  al-Qaeda계열의 조직 사이에서 분열이 일어나기 시작한다. 지금의 반군 세력중 하나인 al-Nusra와 al-Qaeda 내부에서 더욱 강경한 이슬람 원리주의를 주장하는 ISL이라는 조직의 대립이 심화된다. 2013년 6/5에는 약 2주간의 전투끝에  Hezbollah의 적극적인 지원을 받은 정부군이 반군으로부터 al-Quasayr지역을 탈환하며 이 과정에서 25,000명이 이상의 사람들이 도시에서 쫓겨나 난민이되고 500명 이상의 반군, 47명의 시민, 100명 이상의 Hezbollah병력이 사망한다. 2013년 8월 Assad정권의 화학무기 사용으로  Damascus에서 213명의 사망자가 발생한다. Assad는 최초에 화학무기 사용을 부인하였으나 같은해 9월 미국의 개입을 견제하는 차원에서 화학무기를 포기하라는 러시아의 제안을 받아들인다.</p>
-            </div>
-        </div>
-                </section>
+                <div class="summary"><h2 class="heading">Summary</h2>
+                 <p>2013년 4월경 시라이에 있었던  al-Qaeda계열의 조직 사이에서 분열이 일어나기 시작한다. 지금의 반군 세력중 하나인 al-Nusra와 al-Qaeda 내부에서 더욱 강경한 이슬람 원리주의를 주장하는 ISL이라는 조직의 대립이 심화된다. 2013년 6/5에는 약 2주간의 전투끝에  Hezbollah의 적극적인 지원을 받은 정부군이 반군으로부터 al-Quasayr지역을 탈환하며 이 과정에서 25,000명이 이상의 사람들이 도시에서 쫓겨나 난민이되고 500명 이상의 반군, 47명의 시민, 100명 이상의 Hezbollah병력이 사망한다. 2013년 8월 Assad정권의 화학무기 사용으로  Damascus에서 213명의 사망자가 발생한다. Assad는 최초에 화학무기 사용을 부인하였으나 같은해 9월 미국의 개입을 견제하는 차원에서 화학무기를 포기하라는 러시아의 제안을 받아들인다.</p>
+             </div>
+         </div>
+     </section>
 
-                <!-- topic5 -->
-                <section id="topic5" class="timeline-topic">
-                    <div class="div_content">
+     <!-- topic5 -->
+     <section id="topic5" class="timeline-topic">
+        <div class="div_content" id="t5">
             <div class="chapter_title">
                 <h1 class="chapter">6.March of ISIS &amp; their Suspicion**</h1>
                 <h1 class="time">&nbsp;&nbsp;(2013 Sep ~ 2014 Feb)</h1>  
             </div>
-             <div class="media_section"><iframe width="390" height="300" src="https://www.youtube.com/embed/C14Yu0nJCVg" frameborder="0" allowfullscreen></iframe>
-            *2014년 1월 ISIS가 Raqqa를 점령한 후의 모습을 보여주고 있다.
+            <div class="media_section"><iframe width="390" height="300" src="https://www.youtube.com/embed/C14Yu0nJCVg" frameborder="0" allowfullscreen></iframe>
+                *2014년 1월 ISIS가 Raqqa를 점령한 후의 모습을 보여주고 있다.
             </div>
             <div class="chapter_content">
                 <div class="what">
@@ -379,136 +383,140 @@
             </div>
             <div class="summary"><h2 class="heading">Summary</h2>
               <p> CIA에 훈련된 반군 병력들이 2013년 9월에 al-Nusra에 배치한다. 같은해 10월 반군 훈련 프로그램은 중지된다.2014년 2월경에는 al-Qaeda내부 분열의 결과로 ISIS가 al-Qaeda의 전체 조직에서 분리되며, 시리아 내부에서 세력을 확장하는 과정에서 다른 반군세력들 및 Kurd족들과 싸우게된다. Economist의 아랍 전문 저널리스트 Sarah Birke에 따르면 al-Nusra가 assad정권에 대항하는 경향이 강한반면 ISIS는 자신들의 세력확장 자체에 집중하는 경향이 강하다고 주장한다. 같은해 1월 ISIS는 당시 반군이 점령하고 있었던 시리아 북부도시 Raqqa를 점령하여 자신들의 수도로 삼았다. 한국에 거주하는 익명의 시리아 출신 난민은, 당시 정부군이 raqqa주변의 check point에 의도적으로 철수를 한 후 2틀후에 ISIS의 군대가 Raqqa에 유입되었다는 지역뉴스들이 보도되었다고 증언했다.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- topic6 -->
+  <section id="topic6" class="timeline-topic">
+   <div class="div_content" id="t6">
+    <div class="chapter_title">
+        <h1 class="chapter">7.Aggresive intervention</h1>
+        <h1 class="time">&nbsp;&nbsp;(2014 Feb ~ 2014 Dec)</h1>  
+    </div>
+    <div class="media_section"></div>
+    <div class="chapter_content">
+        <div class="what">
+            <h2 class="heading">Type of events</h2>
+            <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+        </div>
+        <div class="who">
+            <h2 class="heading">Who involved?</h2>
+            <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
+        </div>
+    </div>
+    <div class="summary"><h2 class="heading">Summary</h2>
+      <p>2014년과 2015년 사이에는 국제세력의 개입이 더욱 강화된다. 2014년 9월 22일 미국주도하의 국제동맹국은 시리아내 IS점령지역을 타겟으로 공습을 개시하였으며, 미국은 다시한번  Pentagon trainning 프로그램을 통해 반군을 지원하지만 CIA trainning과 다르게 assad정권이 아닌 ISIS와 싸우는 반군들을 지원했다. 이스라엘은 12월초 시리아 수도 인근을 공습한다. </p>
+  </div>
+</div>
+</section>
+
+<!-- topic7 -->
+<section id="topic7" class="timeline-topic">
+   <div class="div_content" id="t7">
+    <div class="chapter_title">
+        <h1 class="chapter">8.Different Reason to Kill**</h1>
+        <h1 class="time">&nbsp;&nbsp;(2014 Sep ~ 2015 Oct)</h1>  
+    </div>
+    <div class="media_section">*이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
+    <div class="chapter_content">
+        <div class="what">
+            <h2 class="heading">Type of events</h2>
+            <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+        </div>
+        <div class="who">
+            <h2 class="heading">Who involved?</h2>
+        </div>
+    </div>
+    <div class="summary"><h2 class="heading">Summary</h2>
+     <p>SIS가 시리나 내에서 세력을 확장하는 동안 내전에 관여된 세력들의 관계가 더욱 복잡해지는 양상을 보인다. 각 세력들은 서로 다른 이유로 시리아 내전에 직접적으로 관여한다. 2015년 9월부터 러시아 공군은 ISIS 격퇴를 명분으로 시라아내 폭격을 시작하지만, Halab today를 비롯한 로컬미디어들은 Russia가 직접적으로 반군 및 민간지역을 폭격하고 있다고 주장하며 관련 영상 자료들을 지속적으로 배포하고 있다. 러시아는 같은 명분으로 크루즈 미사일 공격을 실시하였으나 역시 반군점령지역을 주로 공격한 것으로 보도됨(**출처필요). 2015년 8일 터키는 아리크지역에 있는 쿠르드족을 폭격한다.</p>
+ </div>
+</div>
+</section>
+
+<!-- topic8 -->
+<section id="topic8" class="timeline-topic">
+    <div class="div_content" id="t8">
+        <div class="chapter_title">
+            <h1 class="chapter">9.Recent</h1>
+            <h1 class="time">&nbsp;&nbsp;(2015 Oct ~ Present)</h1>  
+        </div>
+        <div class="media_section">*이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
+        <div class="chapter_content">
+            <div class="what">
+                <h2 class="heading">Type of events</h2>
+                <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
+            </div>
+            <div class="who">
+                <h2 class="heading">Who involved?</h2>
+                <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
             </div>
         </div>
-                </section>
+        <div class="summary"><h2 class="heading">Summary</h2>
+          <p>해당 구간에 일어난 일들에 대한 종합적인 요약을 합니다.</p>
+      </div>
+  </div>
+</section>
 
-                <!-- topic6 -->
-                <section id="topic6" class="timeline-topic">
-                   <div class="div_content">
-            <div class="chapter_title">
-                <h1 class="chapter">7.Aggresive intervention</h1>
-                <h1 class="time">&nbsp;&nbsp;(2014 Feb ~ 2014 Dec)</h1>  
-            </div>
-            <div class="media_section"></div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>2014년과 2015년 사이에는 국제세력의 개입이 더욱 강화된다. 2014년 9월 22일 미국주도하의 국제동맹국은 시리아내 IS점령지역을 타겟으로 공습을 개시하였으며, 미국은 다시한번  Pentagon trainning 프로그램을 통해 반군을 지원하지만 CIA trainning과 다르게 assad정권이 아닌 ISIS와 싸우는 반군들을 지원했다. 이스라엘은 12월초 시리아 수도 인근을 공습한다. </p>
-            </div>
-        </div>
-                </section>
+<div style="height: 700px">
 
-                <!-- topic7 -->
-                <section id="topic7" class="timeline-topic">
-                   <div class="div_content">
-            <div class="chapter_title">
-                <h1 class="chapter">8.Different Reason to Kill**</h1>
-                <h1 class="time">&nbsp;&nbsp;(2014 Sep ~ 2015 Oct)</h1>  
-            </div>
-            <div class="media_section">*이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-                         <p>SIS가 시리나 내에서 세력을 확장하는 동안 내전에 관여된 세력들의 관계가 더욱 복잡해지는 양상을 보인다. 각 세력들은 서로 다른 이유로 시리아 내전에 직접적으로 관여한다. 2015년 9월부터 러시아 공군은 ISIS 격퇴를 명분으로 시라아내 폭격을 시작하지만, Halab today를 비롯한 로컬미디어들은 Russia가 직접적으로 반군 및 민간지역을 폭격하고 있다고 주장하며 관련 영상 자료들을 지속적으로 배포하고 있다. 러시아는 같은 명분으로 크루즈 미사일 공격을 실시하였으나 역시 반군점령지역을 주로 공격한 것으로 보도됨(**출처필요). 2015년 8일 터키는 아리크지역에 있는 쿠르드족을 폭격한다.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Download Section -->
+<section id="contact" class="content-section text-center">
+    <div class="download-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Download Grayscale</h2>
+                <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
+                <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
             </div>
         </div>
-                </section>
+    </div>
+</section>
 
-                <!-- topic8 -->
-                <section id="topic8" class="timeline-topic">
-                    <div class="div_content">
-            <div class="chapter_title">
-                <h1 class="chapter">9.Recent</h1>
-                <h1 class="time">&nbsp;&nbsp;(2015 Oct ~ Present)</h1>  
-            </div>
-            <div class="media_section">*이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
-            <div class="chapter_content">
-                <div class="what">
-                    <h2 class="heading">Type of events</h2>
-                    <p>이곳에는 해당구간에 발생한 사건들의 유형과 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-                <div class="who">
-                    <h2 class="heading">Who involved?</h2>
-                    <p>이곳에는 해당구간에 내전에 개입한 주체와 그 빈도수에 대한 분석을 보여줍니다.</p>
-                </div>
-            </div>
-            <div class="summary"><h2 class="heading">Summary</h2>
-              <p>해당 구간에 일어난 일들에 대한 종합적인 요약을 합니다.</p>
-            </div>
-        </div>
-                </section>
-
-                <div style="height: 700px">
-
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="contact" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
-        </div>
-    </footer>
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+</footer>
 
 
-    <!-- jQuery -->
-    <script src="Scripts/jquery-2.1.4.js"></script>
+<!-- jQuery -->
+<script src="Scripts/jquery-2.1.4.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="Scripts/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="Scripts/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="Scripts/jquery.easing.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="Scripts/jquery.easing.min.js"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="Scripts/grayscale.js"></script>
-    <script src="timeline.js"></script>
-    <script>
-        $(function () {
-            $('#scrollspy').affix({
-                offset: {
-                    top: $('#scrollspy').offset().top,
+<!-- Custom Theme JavaScript -->
+<script src="Scripts/grayscale.js"></script>
+<script src="timeline.js"></script>
+<script src="geomapping.js"></script>
+<script>
+    $(function () {
+        $('#scrollspy').affix({
+            offset: {
+                top: $('#scrollspy').offset().top,
                     //bottom: $('#contact').offset().top
                     bottom: 1000
                 }
             });
-        })
-    </script>
+    })
+
+
+    d3.selectAll(".div_content").style("opacity",0);
+</script>
 </body>
 
 </html>

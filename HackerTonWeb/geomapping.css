@@ -1,0 +1,184 @@
+body{
+	width: 90%;
+	background-color: #222222;
+    font-family: Helvetica;
+    color: white;
+    letter-spacing: 1.2px;
+    margin: 40px  auto;
+}
+p{
+	text-indent: 10px;
+
+}
+.geo_title {
+	 
+	  width:930px;
+	  font-family: 'Roboto Slab', serif;
+	  font-size: 20px;
+	  font-weight: 100;
+	  text-align: center;
+	  letter-spacing: 1.2px;
+	  margin: 20px auto 70px auto;
+	  
+}
+.geo_title2{
+	font-family: 'Helvetica';
+	font-style: italic;
+	font-size: 25px;
+	color: #44CCAA;
+	line-height: 85%;
+}
+.geo_map_title{
+	font-family: 'Helvetica';
+	font-size: 30px;
+	font-style: italic;
+	fill: #EE5588
+}
+.geo_wrapper{
+	width: 860px;
+	margin: 40px  auto;
+}
+.geo_div_main{
+	width: 860px
+	height: 768px;
+	text-align: center;
+	background-color: #222222;
+	display: inline-block;
+}
+.geo_div_column1{
+	width: 550px;
+	margin: 5px;
+	height: 758px;
+	background-color: #222222;
+	text-align: center;
+	position: relative;
+	float: left;
+}
+.geo_div_column2{
+	width: 280px;
+	margin: 5px 5px 5px 15px;
+	height: 758px;
+	background-color: #222222;
+	text-align:left;
+	position: relative;
+	float:left;
+}
+.geo_div_svg1{
+	width: 540px;
+	margin: 0px 5px;
+	padding:5px;
+	height:530px;
+	background-color: #222222;
+}
+.geo_div_text1{
+	letter-spacing: 1.geo_2px;
+	line-height: 140%;
+    font-family: 'Jeju Myeongjo';
+    font-size: 0.geo_9rem;
+	color: #d65577;
+	text-align: left;
+	width: 500px;
+	margin: 0px 5px;
+	padding: 0px 20px;
+	height: auto;
+	background-color: #222222;
+}
+.geo_div_svg2{
+	text-align: center;
+	width: 250px;
+	margin: 5px;
+	padding-top: 80px;
+	height:270px;
+	background-color: #222222;
+}
+.geo_div_text2{
+
+	letter-spacing: 1.geo_2px;
+	line-height: 140%;
+	font-size: 0.geo_9rem;
+	text-align: left;
+	color: #66bb99;
+	width: 250px;
+	margin: 5px;
+	padding: 20px 5px 5px 5px;
+	height: auto;
+	background-color: #222222;
+}
+.geo_buttons-container {
+		margin-top: 30px;
+		align: center;
+		height:100%;  
+		padding: 5px;      
+ }
+ .geo_button {
+	  font: 'Helvetica Neu';
+	  color: #cccccc;
+	  display: inline-block;
+	  margin-left: 10px;
+	  margin-top: 0px;
+	  margin-bottom: 0px;
+	  font-weight: lighter;
+	  cursor: pointer;
+	  font-size: 12px;
+ }
+ .geo_year-selector{
+ 	text-align: center;
+ 	margin-bottom: 8px;
+ 	font-family: 'Helvetica';
+	font-style: italic;
+	font-weight: lighter;
+	color: #cccccc;
+ }
+ .geo_selected {
+ 	  color: #C23355;
+ 	  font-style: underline;
+ 	  font-size: 14px;
+      font-weight: bold;
+ }
+.geo_pp{
+	fill: #333333;
+	stroke: #88aacc;
+	stroke-width: 0.5px;
+}
+ .geo_map_label{
+ 	fill: #338866;
+ 	background-color: #ffcc00;
+ 	font: 'Helvetica Neue';
+ 	font-weight: lighter;
+ 	font-size: 10px;
+ 	letter-spacing: 1.5px;
+ }
+ .geo_syria_label{
+ 	fill: #eeeeee;
+ 	font: 'Helvetica Neue';
+ 	font-weight: bold;
+ 	font-size: 10px;
+ 	letter-spacing: 1.5px;
+ }
+ .geo_map_number{
+ 	fill: #eeeeee;
+ 	background-color: #ffcc00;
+ 	font-family: "Courier New";
+ 	font-weight: lighter;
+ 	font-size: 10px;
+ 	letter-spacing: 1.5px;
+ }
+ .geo_pie_text{
+ 	font-family: "Courier New";
+ 	fill: #eeeeee;
+ 	z-index: 0;
+ }
+ .geo_dev{
+ 	fill: #338866;
+ 	font-size: 9px;
+
+ }
+ .geo_me{
+ 	fill: #C23355;
+ 	font-size: 9px;
+ }
+.geo_map_legend_text{
+	font-family: "Courier New";
+	fill: #cccccc;
+	font-size: 9px;
+}

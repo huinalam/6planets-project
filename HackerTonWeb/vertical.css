@@ -297,38 +297,34 @@ iframe{
     color: #dddddd;
     border-color: #444444;
 }
-#un{
+#int{
     fill: #1177BB;
     color: #22abc3;
 }
-#us{
-    fill: #884477;
-    color: #884477;
-}
-#russia{
-    fill: #1133AA;
-    color: #1133AA;
 
-}
 #assad{
     fill: #BB2244;
     color: #C23355;
 }
-#hezbollah{
+#islamic{
     fill: #ffcc00;
     color: #ffcc00;
 }
-#iran{
-    fill: #338866;
-    color:#338866;
-}
-#kurds{
-    fill: #aa5522;
-    color:#aa5522;
+#isis{
+    fill: #dddddd;
+    color:#dddddd;
 }
 #rebel{
     fill: #335533;
     color:#335533;
+}
+.radio{
+    color: #eeeeee;
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 110%;
+    font-size: 10px;
 }
 .tooltip_div {
     background-color: #111111;
