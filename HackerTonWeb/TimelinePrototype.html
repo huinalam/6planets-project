@@ -28,11 +28,11 @@
 
     <!-- D3 시각화 -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8">
-    
+
     </script>
 
     <!--D3 커스텀-->
-    <link href="vertical.css" rel="stylesheet" type="text/css"/>
+    <link href="vertical.css" rel="stylesheet" type="text/css" />
     <link href="flag.css" rel="stylesheet" type="text/css" />
 
     <!-- 맵 테스트 -->
@@ -40,30 +40,34 @@
         /* Set a size for our map container, the Google Map will take up 100% of this container */
 
         #map2 {
-            width: 50%;
+            width: 100%;
             height: 500px;
         }
 
         .intro {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+13,0+17,0.3+31,0.65+73,1+100 */
-            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 13%, rgba(0,0,0,0) 17%, rgba(0,0,0,0.3) 31%, rgba(0,0,0,0.65) 73%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(13%,rgba(0,0,0,0)), color-stop(17%,rgba(0,0,0,0)), color-stop(31%,rgba(0,0,0,0.3)), color-stop(73%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* IE10+ */
-            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 13%,rgba(0,0,0,0) 17%,rgba(0,0,0,0.3) 31%,rgba(0,0,0,0.65) 73%,rgba(0,0,0,1) 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.3) 31%, rgba(0, 0, 0, 0.65) 73%, rgba(0, 0, 0, 1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(13%, rgba(0, 0, 0, 0)), color-stop(17%, rgba(0, 0, 0, 0)), color-stop(31%, rgba(0, 0, 0, 0.3)), color-stop(73%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.3) 31%, rgba(0, 0, 0, 0.65) 73%, rgba(0, 0, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.3) 31%, rgba(0, 0, 0, 0.65) 73%, rgba(0, 0, 0, 1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.3) 31%, rgba(0, 0, 0, 0.65) 73%, rgba(0, 0, 0, 1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 13%, rgba(0, 0, 0, 0) 17%, rgba(0, 0, 0, 0.3) 31%, rgba(0, 0, 0, 0.65) 73%, rgba(0, 0, 0, 1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0); /* IE6-9 */
         }
 
         .gradation-section {
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+-1,0+0,0+0,0.3+5,0.3+6,0.3+11,0.3+11,0.3+11,0.65+22,0.65+41,0.65+41,0.65+41,0.65+41,0.65+50,0.65+50,1+92 */
-            background: -moz-linear-gradient(top, rgba(0,0,0,0) -1%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 5%, rgba(0,0,0,0.3) 6%, rgba(0,0,0,0.3) 11%, rgba(0,0,0,0.65) 22%, rgba(0,0,0,0.65) 41%, rgba(0,0,0,0.65) 50%, rgba(0,0,0,1) 92%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(-1%,rgba(0,0,0,0)), color-stop(0%,rgba(0,0,0,0)), color-stop(5%,rgba(0,0,0,0.3)), color-stop(6%,rgba(0,0,0,0.3)), color-stop(11%,rgba(0,0,0,0.3)), color-stop(22%,rgba(0,0,0,0.65)), color-stop(41%,rgba(0,0,0,0.65)), color-stop(50%,rgba(0,0,0,0.65)), color-stop(92%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* IE10+ */
-            background: linear-gradient(to bottom, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 5%,rgba(0,0,0,0.3) 6%,rgba(0,0,0,0.3) 11%,rgba(0,0,0,0.65) 22%,rgba(0,0,0,0.65) 41%,rgba(0,0,0,0.65) 50%,rgba(0,0,0,1) 92%,rgba(0,0,0,1) 100%); /* W3C */
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+            background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) - 1%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 6%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.65) 22%, rgba(0, 0, 0, 0.65) 41%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(-1%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), color-stop(5%, rgba(0, 0, 0, 0.3)), color-stop(6%, rgba(0, 0, 0, 0.3)), color-stop(11%, rgba(0, 0, 0, 0.3)), color-stop(22%, rgba(0, 0, 0, 0.65)), color-stop(41%, rgba(0, 0, 0, 0.65)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(92%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) - 1%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 6%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.65) 22%, rgba(0, 0, 0, 0.65) 41%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, rgba(0, 0, 0, 0) - 1%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 6%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.65) 22%, rgba(0, 0, 0, 0.65) 41%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) - 1%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 6%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.65) 22%, rgba(0, 0, 0, 0.65) 41%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) - 1%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.3) 6%, rgba(0, 0, 0, 0.3) 11%, rgba(0, 0, 0, 0.65) 22%, rgba(0, 0, 0, 0.65) 41%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 1) 92%, rgba(0, 0, 0, 1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0); /* IE6-9 */
+            width: 100%; 
+            height: 100%; 
+            position: absolute;
+            margin-top: 00px;
         }
 
 
@@ -146,16 +150,61 @@
         }
 
         /*custom section*/
-        
-.blank-section {
-    padding-top: 50px;
-    padding-bottom: 300px;
-}
-.plat-section {
-    padding-top: 20px;
-    padding-bottom: 300px;
-}
+        .blank-section {
+            padding-top: 50px;
+            padding-bottom: 300px;
+        }
+
+        .plat-section {
+            padding-top: 20px;
+            padding-bottom: 300px;
+        }
+
+        .background-section {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+            margin-top: 00px;
+        }
     </style>
+
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 6,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(34.8618656, 39.9396137), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                // 스타일 주소
+                // https://snazzymaps.com/style/70/unsaturated-browns
+                styles: [{ "elementType": "geometry", "stylers": [{ "hue": "#ff4400" }, { "saturation": -68 }, { "lightness": -4 }, { "gamma": 0.72 }] }, { "featureType": "road", "elementType": "labels.icon" }, { "featureType": "landscape.man_made", "elementType": "geometry", "stylers": [{ "hue": "#0077ff" }, { "gamma": 3.1 }] }, { "featureType": "water", "stylers": [{ "hue": "#00ccff" }, { "gamma": 0.44 }, { "saturation": -33 }] }, { "featureType": "poi.park", "stylers": [{ "hue": "#44ff00" }, { "saturation": -23 }] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [{ "hue": "#007fff" }, { "gamma": 0.77 }, { "saturation": 65 }, { "lightness": 99 }] }, { "featureType": "water", "elementType": "labels.text.stroke", "stylers": [{ "gamma": 0.11 }, { "weight": 5.6 }, { "saturation": 99 }, { "hue": "#0091ff" }, { "lightness": -86 }] }, { "featureType": "transit.line", "elementType": "geometry", "stylers": [{ "lightness": -48 }, { "hue": "#ff5e00" }, { "gamma": 1.2 }, { "saturation": -23 }] }, { "featureType": "transit", "elementType": "labels.text.stroke", "stylers": [{ "saturation": -64 }, { "hue": "#ff9100" }, { "lightness": 16 }, { "gamma": 0.47 }, { "weight": 2.7 }] }]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map2');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(40.6700, -73.9400),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -203,7 +252,7 @@
                         <a class="page-scroll" href="#story7" id="scroll6">7</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#story8" id="scroll7">8</a>
+                        <a class="page-scroll" href="#story8" id="scroll7">8-Map</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#story9" id="scroll8">9</a>
@@ -292,8 +341,8 @@
 
     <!-- 스토리 2  -->
     <section id="story2" class="blank-section text-center">
-        <div style="background-image: url('media/syria1.jpg'); width: 100%; height: 100%; position: absolute; margin-top: 00px;"></div>
-        <div class="gradation-section" style="width: 100%; height: 100%; position: absolute; margin-top: 00px;"></div>
+        <div style="background-image: url('media/syria1.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
         <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -306,8 +355,10 @@
     </section>
 
     <!-- 스토리 3  -->
-    <section id="story3" class="center-section text-center">
-        <div class="download-section">
+    <section id="story3" class="blank-section text-center">
+        <div style="background-image: url('media/syria6.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <p></p>
@@ -325,21 +376,23 @@
         <div class="plat-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <!-- 시리아 국기를 이용한 시각화 -->
-                    <div class="flag_div" width="800" heigh="500"></div>
+                    <h2><q>시리아 국민의 절반이 난민이 되었다.</q></h2>
                     <p></p>
-                    <p style="text-align: left">
+                    <!--<p style="text-align: left">
                         희생자가 기하급수적으로 늘어나고 현장에 접근하기 힘들어졌다.
                         결국 유엔은 시리아 내전의 사망자 집계를 포기해야했다.<br/>
-                    </p>
+                    </p>--> <!-- 시리아 국기를 이용한 시각화 -->
+                    <div class="flag_div" width="800" heigh="500"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 스토리 5 -->
-    <section id="story5" class="center-section text-center">
-        <div class="download-section">
+    <section id="story5" class="blank-section text-center">
+        <div style="background-image: url('media/561.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>“시아파? 수니파? 이것만이 내전의 원인은 아니다.”</h2>
@@ -353,16 +406,14 @@
     </section>
 
     <!-- 스토리 6 -->
-    <section id="story6" class="content-section text-center">
-        <div class="download-section">
+    <section id="story6" class="blank-section text-center">
+        <div class="plat-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-10 col-lg-offset-1">
                     <!-- 구글 지도 -->
-                    <p></p>
+                    <div id="map2"></div>
                     <p style="text-align: left">
-                        시리아는 동서양을 잇는 문명과 물질의 교차점인 지중해 동안에 위치한 나라이다.<br /><br />
-                        지정학적 이유로 시리아는 수천 년 동안 그리스, 로마, 아랍-이슬람 제국, 오스만투르크, 프랑스 등 다양한 국가의 통치를 받았으며, 1946년에 독립하였다. 그 과정에서 다원화된 국민 구성원을 갖추고, 다양한 종교적 분파들이 공존하게 되었다.<br /><br />
-                        지리적으로 강한 세력들 사이에 있는 시리아는 주변 정세가 불안해왔다. 중동 지역 내에서는 이란과 레바논의 헤즈볼라 세력은 현 대통령 알 아사드 정권에 우호적이다. 미국을 중심으로한 서방세계는 반정부 세력을 지지한다. 그러나 시리아에 부동항을 둔 러시아는 아사드 정권을 지지한다. 이처럼 시리아는 여러 국가의 이권과 우호적 관계를 사이에서 국가의 운명이 좌지우지 되고 있다.
+                        지정학적 이유로 시리아는 수천 년 동안 그리스, 로마, 아랍-이슬람 제국, 오스만투르크, 프랑스 등 다양한 국가의 통치를 받았으며, 1946년에 독립하였다.<br/> 이란과 레바논은 현 시리아 정권에 우호적이다. 시리아에 부동항을 둔 러시아는 아사드 정권을 지지한다. 그러나 미국을 중심으로한 서방세계는 반정부 세력을 지지한다. 이처럼 지리적으로 강한 세력들 사이에 있는 시리아는 주변 정세에 불안할 수 밖에 없었다.
                         <br />
                     </p>
                 </div>
@@ -371,14 +422,16 @@
     </section>
 
     <!-- 스토리 7 -->
-    <section id="story7" class="center-section text-center">
-        <div class="download-section">
+    <section id="story7" class="blank-section text-center">
+        <div style="background-image: url('media/syria7.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2><q>시리아 내전은 수 많은 난민을 발생시켰다.</q></h2>
                     <p></p>
                     <p style="text-align: left">
-                        살아남기 위한 난민들의 고군분투는 여전히 진행중이다.
+                        난민들은 살아남기 위해 자신들의 나라를 떠나고 있다.
                         <br />
                     </p>
                 </div>
@@ -426,8 +479,10 @@
     </section>
 
     <!-- 스토리 9 -->
-    <section id="story9" class="center-section text-center">
-        <div class="download-section">
+    <section id="story9" class="blank-section text-center">
+        <div style="background-image: url('media/syria9.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>“잔혹의 4년, 아직 끝나지 않은 시리아 전쟁”</h2>
@@ -657,14 +712,20 @@
                             <h1 class="chapter">9.Recent</h1>
                             <h1 class="time">&nbsp;&nbsp;(2015 Oct ~ Present)</h1>
                         </div>
-                        <div class="media_section">*이곳에는 챕터와 관련된 미디어(사진,영상)들을 보여줍니다.</div>
+                        <div class="media_section">
+                            러시아 여객기가 이집트의 북시나이 반도에 추락하면서 200명이 넘는 승객 전원이 사망하는 참사가 발생했다. 러시아측에서는 이 여객기가 떨어지기 전에 ISIS로부터 미사일 피격을 당한 것으로 보고 있다. 이후 IS가 러시아 여객기를 격추한 사실을 인정하면서 전쟁의 기운이 더 증가하고 있다.
+
+                            <br/>
+
+                            시리아 내전은 여전히 진행 중이다.
+                        </div>
                         <div class="chapter_content">
                             <h2 class="heading">Type of Events &amp; Group involved in</h2>
                         </div>
-                        <div class="summary">
+                        <!--<div class="summary">
                             <h2 class="heading">Summary</h2>
                             <p>해당 구간에 일어난 일들에 대한 종합적인 요약을 합니다.</p>
-                        </div>
+                        </div>-->
                     </div>
                 </section>
             </div>
@@ -672,8 +733,10 @@
     </section>
 
     <!-- 스토리 11 -->
-    <section id="story11" class="center-section text-center">
-        <div class="download-section">
+    <section id="story11" class="blank-section text-center">
+        <div style="background-image: url('media/syria8.jpg');" class="background-section"></div>
+        <div class="gradation-section"></div>
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>“그들은 고향으로 돌아갈 수 있을 것인가”</h2>
@@ -688,11 +751,11 @@
     </section>
 
     <!-- 스토리 12 -->
-    <section id="story12" class="center-section text-center">
-        <div class="download-section">
+    <section id="story12" class="blank-section text-center">
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1>“사람이 전쟁보다 귀하다.”</h1><span class="text-right">스베틀라나 알렉시예비치</span>
+                    <h1>“시리아 난민 데이터 시각화를 만들며”</h1><!--<span class="text-right">스베틀라나 알렉시예비치</span>-->
                     <!-- 체르노빌의 목소리 저자, 링크 주면 어떨까?-->
                     <p></p>
                     <p>인간의 잔인함 속에서 살아남은 사람들의</p>
@@ -704,8 +767,8 @@
     </section>
 
     <!-- 스토리 13 : 함께 만든 사람들 -->
-    <section id="story13" class="center-section text-center">
-        <div class="download-section">
+    <section id="story13" class="blank-section text-center">
+        <div class="center-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>함께 만든 사람들</h2>
@@ -720,8 +783,6 @@
                         이가은 https://www.facebook.com/gaeun.lee.9066389
                         <br />
                         이봉규 https://www.facebook.com/Bongkyu.lee17
-                        <br />
-                        임선희 https://www.facebook.com/fructidor16
                     </p>
                 </div>
             </div>

@@ -145,6 +145,7 @@
     <Content Include="media\syria2.jpg" />
     <Content Include="media\syria3.jpg" />
     <Content Include="media\syria4.jpg" />
+    <Content Include="media\syria5.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="timeline.js" />
